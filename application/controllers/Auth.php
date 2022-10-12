@@ -13,9 +13,11 @@ class Auth extends CI_Controller {
         $data = array(
             'title'     => 'Trackless Mail',
             'content'   => 'home/index',
+            'extra'     => 'home/js/js_index',
 		);
 		$this->load->view('layout/wrapper', $data);
 	}
+	
 	public function resetpw()
 	{
         $data = array(

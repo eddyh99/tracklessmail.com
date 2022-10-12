@@ -3,7 +3,7 @@
         <a class="navbar-brand" href="#">
             <img src="<?= base_url();?>assets/images/tc-mail-new.png" width="300">
         </a>
-        <a href="tracklessproject.com" class="bg-trackless me-5" data-bs-toggle="offcanvas"
+        <a href="https://tracklessproject.com" class="bg-trackless me-5" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <svg width="57" height="53" viewBox="0 0 57 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -280,7 +280,7 @@
             </div>
         </div>
         <div class="d-flex justify-content-end footer-menus">
-            <a href="tracklessproject.com" class="">TracklessProject</a> |
+            <a href="https://tracklessproject.com" class="">TracklessProject</a> |
             <a href="#" class="active">TracklessMail</a> |
             <a href="#" class="">TracklessChat</a> |
             <a href="#" class="">TracklessCompany</a> |
@@ -290,30 +290,3 @@
         </div>
     </div>
 </footer>
-
-<script>
-const togglePassword1 = document.querySelector("#togglePassword1");
-const togglePassword2 = document.querySelector("#togglePassword2");
-const password1 = document.querySelector("#password1");
-const password2 = document.querySelector("#password2");
-
-togglePassword1.addEventListener("click", function() {
-
-    // toggle the type attribute
-    const type = password1.getAttribute("type") === "password" ? "text" : "password";
-    password1.setAttribute("type", type);
-    // toggle the eye icon
-    this.classList.toggle('fa-eye');
-    this.classList.toggle('fa-eye-slash');
-});
-
-togglePassword2.addEventListener("click", function() {
-
-    // toggle the type attribute
-    const type = password2.getAttribute("type") === "password" ? "text" : "password";
-    password2.setAttribute("type", type);
-    // toggle the eye icon
-    this.classList.toggle('fa-eye');
-    this.classList.toggle('fa-eye-slash');
-});
-</script>
