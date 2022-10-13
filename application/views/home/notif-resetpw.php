@@ -11,27 +11,20 @@
             <div class="col-12">
                 <div class="box-form-rpw">
                     <form>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <div class="col-12 col-sm-6 col-md-6">
-                                <div class="row">
-                                    <div class="col-7">
-                                        <input type="text" class="form-control" id="" placeholder="EMAIL">
-                                    </div>
-                                    <div class="col-5 text-mail">
-                                        @tracklessmail.com
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col">
-                                        <input type="text" class="form-control" id=""
-                                            placeholder="CONFIRM EMAIL TO RECOVERY PASSWORD">
+                        <div class="d-flex justify-content-center align-items-center ">
+                            <div class="col-6">
+                                <div class="row text-center">
+                                    <div class="col mt-4">
+                                        <div class="text-center text-trackless">
+                                            kalau data nya benar client akan receive link lewat email untuk reset
+                                            password
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col mt-0">
+                                    <div class="col mt-4">
                                         <div class="text-center">
-                                            <button class="btn btn-trackless mt-5">Confirm</button>
+                                            <button class="btn btn-trackless mt-5">Done</button>
                                         </div>
                                     </div>
                                 </div>

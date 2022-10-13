@@ -1,7 +1,7 @@
 <nav class="navbar bg-black">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src="<?= base_url();?>assets/images/tc-mail-new.png" width="300">
+            <img src="<?= base_url();?>assets/images/tc-mail-new.png">
         </a>
         <a href="https://tracklessproject.com" class="bg-trackless me-5" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -30,9 +30,9 @@
                         simple steps</p>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 d-none d-sm-none d-lg-inline">
                 <!-- Masthead device mockup feature-->
-                <div class="masthead-device-mockup">
+                <div class="masthead-device-mockup text-center">
                     <img class="img-fluid" src="<?= base_url();?>assets/images/phone.png" alt="">
                 </div>
             </div>
@@ -41,12 +41,13 @@
 </header>
 <!-- Quote/testimonial aside-->
 <aside class="text-center bg-black">
-    <div class="container-fluid px-5">
-        <div class="d-flex justify-content-around">
-            <div class="col-3 box-bottom-slider">
+    <div class="container-fluid px-5 py-md-5">
+        <div class="d-md-flex justify-content-md-around">
+            <div class="col-12 col-md-3 box-bottom-slider">
                 <div class="d-flex align-items-start flex-column mb-3" style="height: 200px;">
-                    <div class="mb-auto pt-5" style="width: 100%;">Fill up the form below</div>
-                    <div class="p-2" style="width: 100%;">
+                    <div class="mb-auto pt-5 pt-md-4 pt-xl-5 pt-lg-4 text-box" style="width: 100%;">Fill up the form
+                        below</div>
+                    <div class="p-4" style="width: 100%;">
                         <svg width="50" height="50" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="40" height="40" rx="16" fill="#2D2D2D" />
                             <path
@@ -69,13 +70,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3 box-bottom-slider">
+            <div class="col-12 col-md-3 box-bottom-slider">
                 <div class="d-flex align-items-start flex-column mb-3" style="height: 200px;">
-                    <div class="mb-auto pt-5" style="width: 100%;">
+                    <div class="mb-auto pt-5 pt-md-4 pt-xl-5 text-box" style="width: 100%;">
                         Activate the email by clicking
                         on the link received on your
                         recovery mail</div>
-                    <div class="p-2" style="width: 100%;">
+                    <div class="p-4" style="width: 100%;">
                         <svg width="50" height="50" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="40" height="40" rx="16" fill="#2D2D2D" />
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -95,11 +96,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3 box-bottom-slider">
+            <div class="col-12 col-md-3 box-bottom-slider">
                 <div class="d-flex align-items-start flex-column mb-3" style="height: 200px;">
-                    <div class="mb-auto pt-5" style="width: 100%;">Use the configuration data on
+                    <div class="mb-auto pt-5 pt-md-4 pt-xl-5 text-box" style="width: 100%;">Use the configuration data
+                        on
                         an email client to access</div>
-                    <div class="p-2" style="width: 100%;">
+                    <div class="p-4" style="width: 100%;">
                         <svg width="50" height="50" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="40" height="40" rx="16" fill="#2D2D2D" />
                             <circle cx="20" cy="20" r="9" fill="#2A4157" fill-opacity="0.24" />
@@ -131,7 +133,7 @@
 <section class="bg-black">
     <div class="container-fluid px-5 py-5">
         <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
-            <div class="col-12 mb-5">
+            <div class="col-12 mb-5 responsive-text">
                 <h1 class="text-green-content lh-1 mb-4">START NOW
                 </h1>
                 <p class="text-trackless mb-5 mb-lg-0" style="font-size: 20px;">The email that you will provide will be
@@ -142,15 +144,15 @@
                     It will not be possible to recover or decrypt any data from the server even with forensic
                     operations.</p>
             </div>
-            <div class="col-12">
+            <div class="col-12 col-md-10 col-lg-12 p-0 px-lg-4 col-xxl-8">
                 <div class="box-form-mail">
                     <form>
-                        <div class="col-10">
+                        <div class="col-11 col-lg-10">
                             <div class="row">
-                                <div class="col-8">
+                                <div class="col-6 col-md-8 col-lg-9">
                                     <input type="text" class="form-control" id="" placeholder="EMAIL">
                                 </div>
-                                <div class="col-4 text-mail">
+                                <div class="col-6 col-md-4 col-lg-3 text-mail">
                                     @tracklessmail.com
                                 </div>
                             </div>
@@ -218,14 +220,14 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col mt-5">
-                                    <div class="d-flex">
+                                <div class="col mt-3">
+                                    <div class="d-lg-flex">
                                         <div class="p-2 flex-shrink-1">
                                             <a href="#" class="pass-f">Forgot
                                                 password?</a>
                                             <a href="<?= base_url(); ?>auth/resetpw" class="pass-r">Reset password</a>
                                         </div>
-                                        <div class="p-2 w-100 text-center">
+                                        <div class="p-2 col-12 col-md-12 col-lg-9 text-center">
                                             <button class="btn btn-trackless mt-5">Confirm</button>
                                         </div>
                                     </div>
@@ -239,35 +241,35 @@
     </div>
 </section>
 <!-- Footer-->
-<footer class="bg-footer-trackless py-5">
-    <div class="container-fluid px-5">
+<footer class="bg-footer-trackless py-3">
+    <div class="container-fluid px-md-5">
         <div class="container">
             <div class="bg-imagebox">
                 <img src="<?=base_url()?>assets/images/trackless-fit.png" alt="" class="footer-logo-center">
             </div>
             <div class="d-flex justify-content-around">
                 <div class="col-4">
-                    <img src="<?= base_url();?>assets/images/footer-logo.png" width="300">
+                    <img src="<?= base_url();?>assets/images/footer-logo.png" class="footer-logo">
                     <div class="d-flex flex-wrap icon-sosmed">
-                        <div class="me-md-2 me-lg-4 mt-3">
+                        <div class="me-md-2 me-lg-2 me-xl-3 mt-3">
                             <img src="<?=base_url()?>assets/images/fb-icon.png" class="p-1">
                         </div>
-                        <div class="me-md-2 me-lg-4 mt-3">
+                        <div class="me-md-2 me-lg-2 me-xl-3 mt-3">
                             <img src="<?=base_url()?>assets/images/twitter-icon.png" class="p-1">
                         </div>
-                        <div class="me-md-2 me-lg-4 mt-3">
+                        <div class="me-md-2 me-lg-2 me-xl-3 mt-3">
                             <img src="<?=base_url()?>assets/images/ig-icon.png" class="p-1">
                         </div>
-                        <div class="me-md-2 me-lg-4 mt-3">
+                        <div class="me-md-2 me-lg-2 me-xl-3 mt-3">
                             <img src="<?=base_url()?>assets/images/c-icon.png" class="p-1">
                         </div>
-                        <div class="me-md-2 me-lg-4 mt-3">
+                        <div class="me-md-2 me-lg-2 me-xl-3 mt-3">
                             <img src="<?=base_url()?>assets/images/linkedin-icon.png" class="p-1">
                         </div>
-                        <div class="me-md-2 me-lg-4 mt-3">
+                        <div class="me-md-2 me-lg-2 me-xl-3 mt-3">
                             <img src="<?=base_url()?>assets/images/tiktok-icon.png" class="p-1">
                         </div>
-                        <div class="me-md-2 me-lg-4 mt-3">
+                        <div class="me-md-2 me-lg-2 me-xl-3 mt-3">
                             <img src="<?=base_url()?>assets/images/youtube-icon.png" class="p-1">
                         </div>
                     </div>
@@ -279,7 +281,7 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex justify-content-end footer-menus">
+        <div class="d-flex flex-wrap justify-content-end footer-menus">
             <a href="https://tracklessproject.com" class="">TracklessProject</a> |
             <a href="#" class="active">TracklessMail</a> |
             <a href="#" class="">TracklessChat</a> |

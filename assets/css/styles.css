@@ -12635,6 +12635,10 @@ footer a:focus {
   font-family: 'Red Hat Display', sans-serif;
 }
 
+.text-green {
+  color: #00DD9C;
+}
+
 .text-green-trackless--header {
   font-weight: 700;
   line-height: 60px;
@@ -12672,6 +12676,20 @@ footer a:focus {
 .bg-trackless:hover {
   opacity: 1;
   transition: all ease .4s;
+}
+
+.logo-notif {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  border: none;
+  border-radius: 100px;
+  padding: 1rem 1rem;
+  width: 200px;
+}
+
+.navbar-brand img {
+  width: 300px;
 }
 
 .slider {
@@ -12716,11 +12734,14 @@ footer a:focus {
 }
 
 .btn-back-green {
+  position: absolute;
+  top: 5%;
+  left: 10%;
   border: none;
   border-radius: 100px;
   background: #00DD9C !important;
   color: #fff !important;
-  padding: 1.45rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .box-form-mail input {
@@ -12881,4 +12902,1360 @@ footer a:focus {
   text-decoration: none;
   color: #fff;
   transition: all ease .4s;
+}
+
+@media (max-width: 575px) {
+  .logo-notif {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    border: none;
+    border-radius: 100px;
+    padding: 1rem 1rem;
+    width: 200px;
+  }
+
+  .box-form-rpw {
+    padding: 2rem 0rem;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10rem;
+  }
+
+  .box-form-rpw input {
+    margin: 1rem 0;
+    font-size: 11px;
+  }
+
+  .box-form-rpw .text-mail {
+    margin: 1.25rem 0 0 0;
+    color: #00DD9C;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 0;
+  }
+
+  .btn-back-green {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    border: none;
+    border-radius: 100px;
+    background: #00DD9C !important;
+    color: #fff !important;
+    padding: .5rem;
+  }
+
+  .navbar-brand img {
+    width: 200px;
+  }
+
+  .bg-trackless svg {
+    width: 45px !important;
+    height: auto !important;
+  }
+
+  .slider {
+    padding-bottom: 0 !important;
+  }
+
+  .slider h1 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .slider p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  aside,
+  section {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .box-bottom-slider .text-box {
+    font-size: 16px;
+  }
+
+  .box-bottom-slider svg {
+    width: 30px;
+    height: auto;
+  }
+
+  .responsive-text .text-green-content {
+    font-size: 26px;
+  }
+
+  .responsive-text .text-trackless {
+    font-size: 16px;
+  }
+
+  .box-form-mail {
+    padding: 1.5rem 1.5rem;
+    border: 2px solid #00DD9C;
+    border-radius: 10px;
+  }
+
+  .box-form-mail input {
+    margin: .5rem 0;
+    background: #F5F5FA;
+    box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(170, 170, 204, 0.25), inset 5px 5px 10px rgba(170, 170, 204, 0.5), inset -5px -5px 10px #FFFFFF;
+    border-radius: 40px;
+    border-right: none;
+    height: 40px;
+    font-size: .875em;
+  }
+
+  .input-group-text-trackless {
+    margin: .5rem 0;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .box-form-mail .text-mail {
+    margin: 1rem 0 0 0;
+    font-size: .875em;
+    padding: 0;
+  }
+
+  .question-input {
+    width: 20px;
+
+  }
+
+  .question-input svg {
+    right: -5%;
+    top: 15%;
+    width: 20px;
+  }
+
+  .text-trackless-form {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .pass-f {
+    display: block;
+    margin-bottom: .5rem;
+  }
+
+  .pass-r {
+    display: block;
+  }
+
+  .bg-imagebox {
+    position: relative;
+    padding: 3vw 0;
+    width: 150px;
+    margin: auto;
+  }
+
+  .footer-logo-center {
+    position: absolute;
+    top: 0%;
+    width: 150px;
+    margin: auto;
+  }
+
+  .footer-logo {
+    width: 150px;
+  }
+
+  .icon-sosmed img {
+    width: 25px;
+  }
+
+  .footer-contact>h2,
+  .footer-contact>span {
+    margin-bottom: 0rem;
+  }
+
+  .footer-contact>h2 {
+    font-size: 14px;
+  }
+
+  .footer-contact>span {
+    font-size: 11px;
+  }
+
+  .footer-menus {
+    padding-top: 3rem;
+  }
+
+  .footer-menus a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 11px;
+    margin: 0 .5rem;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    transition: all ease .4s;
+  }
+
+  .footer-menus a:hover {
+    text-decoration: none;
+    color: #00DD9C;
+    transition: all ease .4s;
+  }
+
+  .footer-menus a.active {
+    text-decoration: none;
+    color: #00DD9C;
+    font-weight: 500;
+    transition: all ease .4s;
+  }
+
+  .footer-menus a.active:hover {
+    text-decoration: none;
+    color: #fff;
+    transition: all ease .4s;
+  }
+}
+
+@media (min-width: 576px) {
+
+  .box-form-rpw {
+    padding: 2rem 0rem;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10rem;
+  }
+
+  .box-form-rpw input {
+    margin: 1rem 0;
+    font-size: 11px;
+  }
+
+  .box-form-rpw .text-mail {
+    margin: 1.25rem 0 0 0;
+    color: #00DD9C;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 0;
+  }
+
+  .btn-back-green {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    border: none;
+    border-radius: 100px;
+    background: #00DD9C !important;
+    color: #fff !important;
+    padding: .5rem;
+  }
+
+  .navbar-brand img {
+    width: 200px;
+  }
+
+  .bg-trackless svg {
+    width: 45px !important;
+    height: auto !important;
+  }
+
+  .slider {
+    padding-bottom: 0 !important;
+  }
+
+  .slider h1 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .slider p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  aside,
+  section {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .box-bottom-slider .text-box {
+    font-size: 16px;
+  }
+
+  .box-bottom-slider svg {
+    width: 30px;
+    height: auto;
+  }
+
+  .responsive-text .text-green-content {
+    font-size: 26px;
+  }
+
+  .responsive-text .text-trackless {
+    font-size: 16px;
+  }
+
+  .box-form-mail {
+    padding: 1.5rem 1.5rem;
+    border: 2px solid #00DD9C;
+    border-radius: 10px;
+  }
+
+  .box-form-mail input {
+    margin: .5rem 0;
+    background: #F5F5FA;
+    box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(170, 170, 204, 0.25), inset 5px 5px 10px rgba(170, 170, 204, 0.5), inset -5px -5px 10px #FFFFFF;
+    border-radius: 40px;
+    border-right: none;
+    height: 40px;
+    font-size: .875em;
+  }
+
+  .input-group-text-trackless {
+    margin: .5rem 0;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .box-form-mail .text-mail {
+    margin: 1rem 0 0 0;
+    font-size: .875em;
+    padding: 0;
+  }
+
+  .question-input {
+    width: 20px;
+
+  }
+
+  .question-input svg {
+    right: -5%;
+    top: 15%;
+    width: 20px;
+  }
+
+  .text-trackless-form {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .pass-f {
+    display: block;
+    margin-bottom: .5rem;
+  }
+
+  .pass-r {
+    display: block;
+  }
+
+  .bg-imagebox {
+    position: relative;
+    padding: 3vw 0;
+    width: 150px;
+    margin: auto;
+  }
+
+  .footer-logo-center {
+    position: absolute;
+    top: 0%;
+    width: 150px;
+    margin: auto;
+  }
+
+  .footer-logo {
+    width: 150px;
+  }
+
+  .icon-sosmed img {
+    width: 25px;
+  }
+
+  .footer-contact>h2,
+  .footer-contact>span {
+    margin-bottom: 0rem;
+  }
+
+  .footer-contact>h2 {
+    font-size: 14px;
+  }
+
+  .footer-contact>span {
+    font-size: 11px;
+  }
+
+  .footer-menus {
+    padding-top: 3rem;
+  }
+
+  .footer-menus a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 11px;
+    margin: 0 .5rem;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    transition: all ease .4s;
+  }
+
+  .footer-menus a:hover {
+    text-decoration: none;
+    color: #00DD9C;
+    transition: all ease .4s;
+  }
+
+  .footer-menus a.active {
+    text-decoration: none;
+    color: #00DD9C;
+    font-weight: 500;
+    transition: all ease .4s;
+  }
+
+  .footer-menus a.active:hover {
+    text-decoration: none;
+    color: #fff;
+    transition: all ease .4s;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo-notif {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    border: none;
+    border-radius: 100px;
+    padding: 1rem 1rem;
+    width: 200px;
+  }
+
+  .box-form-rpw {
+    padding: 2rem 0rem;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10rem;
+  }
+
+  .box-form-rpw input {
+    margin: 1rem 0;
+    font-size: 11px;
+  }
+
+  .box-form-rpw .text-mail {
+    margin: 1.25rem 0 0 0;
+    color: #00DD9C;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 0;
+  }
+
+  .btn-back-green {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    border: none;
+    border-radius: 100px;
+    background: #00DD9C !important;
+    color: #fff !important;
+    padding: .5rem;
+  }
+
+  .navbar-brand img {
+    width: 250px;
+  }
+
+  .bg-trackless svg {
+    width: 50px !important;
+    height: auto !important;
+  }
+
+  .slider {
+    padding-bottom: 0 !important;
+  }
+
+  .slider h1 {
+    font-size: 36px;
+    line-height: 60px;
+  }
+
+  .slider p {
+    font-size: 22px;
+    line-height: 60px;
+  }
+
+  aside,
+  section {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .box-bottom-slider .text-box {
+    font-size: 16px;
+  }
+
+  .box-bottom-slider svg {
+    width: 40px;
+    height: auto;
+  }
+
+  .responsive-text .text-green-content {
+    font-size: 26px;
+  }
+
+  .responsive-text .text-trackless {
+    font-size: 16px;
+  }
+
+  .box-form-mail {
+    padding: 2.5rem 2.5rem;
+    border: 2px solid #00DD9C;
+    border-radius: 10px;
+  }
+
+  .box-form-mail input {
+    margin: .5rem 0;
+    background: #F5F5FA;
+    box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(170, 170, 204, 0.25), inset 5px 5px 10px rgba(170, 170, 204, 0.5), inset -5px -5px 10px #FFFFFF;
+    border-radius: 40px;
+    border-right: none;
+    height: 40px;
+    font-size: .875em;
+  }
+
+  .input-group-text-trackless {
+    margin: .5rem 0;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .box-form-mail .text-mail {
+    margin: 1rem 0 0 0;
+    font-size: .875em;
+    padding: 0;
+  }
+
+  .question-input {
+    width: 30px;
+  }
+
+  .question-input svg {
+    right: -5%;
+    top: 15%;
+    width: 30px;
+  }
+
+  .text-trackless-form {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .pass-f {
+    display: block;
+    margin-bottom: .5rem;
+  }
+
+  .pass-r {
+    display: block;
+  }
+
+  .bg-imagebox {
+    position: relative;
+    padding: 3vw 0;
+    width: 200px;
+    margin: auto;
+  }
+
+  .footer-logo-center {
+    position: absolute;
+    top: 0%;
+    width: 200px;
+    margin: auto;
+  }
+
+  .footer-logo {
+    width: 200px;
+  }
+
+  .icon-sosmed img {
+    width: 35px;
+  }
+
+  .footer-contact>h2,
+  .footer-contact>span {
+    margin-bottom: 1rem;
+  }
+
+  .footer-contact>h2 {
+    font-size: 24px;
+  }
+
+  .footer-contact>span {
+    font-size: 14px;
+  }
+
+  .footer-menus {
+    padding-top: 3rem;
+  }
+
+  .footer-menus a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 11px;
+    margin: 0 .5rem;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    transition: all ease .4s;
+  }
+
+  .footer-menus a:hover {
+    text-decoration: none;
+    color: #00DD9C;
+    transition: all ease .4s;
+  }
+
+  .footer-menus a.active {
+    text-decoration: none;
+    color: #00DD9C;
+    font-weight: 500;
+    transition: all ease .4s;
+  }
+
+  .footer-menus a.active:hover {
+    text-decoration: none;
+    color: #fff;
+    transition: all ease .4s;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .box-form-rpw {
+    padding: 2rem 0rem;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10rem;
+  }
+
+  .box-form-rpw input {
+    margin: 1rem 0;
+    font-size: 16px;
+  }
+
+  .box-form-rpw .text-mail {
+    margin: 1.25rem 0 0 0;
+    color: #00DD9C;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .btn-back-green {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    border: none;
+    border-radius: 100px;
+    background: #00DD9C !important;
+    color: #fff !important;
+    padding: .5rem;
+  }
+
+  .navbar-brand img {
+    width: 300px;
+  }
+
+  .bg-trackless svg {
+    width: 57px !important;
+    height: auto !important;
+  }
+
+  .slider {
+    padding-bottom: 0 !important;
+  }
+
+  .slider h1 {
+    font-size: 36px;
+    line-height: 60px;
+  }
+
+  .slider p {
+    font-size: 22px;
+    line-height: 38px;
+  }
+
+  aside,
+  section {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .box-bottom-slider .text-box {
+    font-size: 16px;
+  }
+
+  .box-bottom-slider svg {
+    width: 40px;
+    height: auto;
+  }
+
+  .responsive-text .text-green-content {
+    font-size: 26px;
+  }
+
+  .responsive-text .text-trackless {
+    font-size: 16px;
+  }
+
+  .box-form-mail {
+    padding: 2.5rem 2.5rem;
+    border: 2px solid #00DD9C;
+    border-radius: 10px;
+  }
+
+  .box-form-mail input {
+    margin: .5rem 0;
+    background: #F5F5FA;
+    border-radius: 40px;
+    border-right: none;
+    height: 40px;
+    font-size: .875em;
+  }
+
+  .input-group-text-trackless {
+    margin: .5rem 0;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .box-form-mail .text-mail {
+    margin: 1rem 0 0 0;
+    font-size: .875em;
+    padding: 0;
+  }
+
+  .question-input {
+    width: 30px;
+  }
+
+  .question-input svg {
+    right: -4%;
+    top: 15%;
+    width: 30px;
+  }
+
+  .text-trackless-form {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .pass-f {
+    display: block;
+    margin-bottom: .5rem;
+  }
+
+  .pass-r {
+    display: block;
+  }
+
+  .bg-imagebox {
+    position: relative;
+    padding: 3vw 0;
+    width: 200px;
+    margin: auto;
+  }
+
+  .footer-logo-center {
+    position: absolute;
+    top: 50%;
+    width: 200px;
+    margin: auto;
+  }
+
+  .footer-logo {
+    width: 300px;
+  }
+
+  .icon-sosmed img {
+    width: 35px;
+  }
+
+  .footer-contact>h2,
+  .footer-contact>span {
+    margin-bottom: 1rem;
+  }
+
+  .footer-contact>h2 {
+    font-size: 36px;
+  }
+
+  .footer-contact>span {
+    font-size: 16px;
+  }
+
+  .footer-menus {
+    padding-top: 3rem;
+  }
+
+  .footer-menus a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0 .5rem;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    transition: all ease .4s;
+  }
+
+  .footer-menus a:hover {
+    text-decoration: none;
+    color: #00DD9C;
+    transition: all ease .4s;
+  }
+
+  .footer-menus a.active {
+    text-decoration: none;
+    color: #00DD9C;
+    font-weight: 500;
+    transition: all ease .4s;
+  }
+
+  .footer-menus a.active:hover {
+    text-decoration: none;
+    color: #fff;
+    transition: all ease .4s;
+  }
+}
+
+@media (min-width: 1200px) {
+
+
+  .box-form-rpw {
+    padding: 2rem 0rem;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10rem;
+  }
+
+  .box-form-rpw input {
+    margin: 1rem 0;
+    font-size: 16px;
+  }
+
+  .box-form-rpw .text-mail {
+    margin: 1.25rem 0 0 0;
+    color: #00DD9C;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .btn-back-green {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    border: none;
+    border-radius: 100px;
+    background: #00DD9C !important;
+    color: #fff !important;
+    padding: .5rem;
+  }
+
+  .navbar-brand img {
+    width: 300px;
+  }
+
+  .bg-trackless svg {
+    width: 57px !important;
+    height: auto !important;
+  }
+
+  .slider {
+    padding-bottom: 1rem !important;
+  }
+
+  .slider h1 {
+    font-size: 44px;
+    line-height: 60px;
+  }
+
+  .slider p {
+    font-size: 25px;
+    line-height: 38px;
+  }
+
+  aside,
+  section {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .box-bottom-slider .text-box {
+    font-size: 16px;
+  }
+
+  .box-bottom-slider svg {
+    width: 50px;
+    height: auto;
+  }
+
+  .responsive-text .text-green-content {
+    font-size: 36px;
+  }
+
+  .responsive-text .text-trackless {
+    font-size: 20px;
+  }
+
+  .box-form-mail {
+    padding: 2.5rem 2.5rem;
+    border: 2px solid #00DD9C;
+    border-radius: 10px;
+  }
+
+  .box-form-mail input {
+    margin: 1rem 0;
+    background: #F5F5FA;
+    border-radius: 40px;
+    border-right: none;
+    height: 40px;
+    font-size: .875em;
+  }
+
+  .input-group-text-trackless {
+    margin: 1rem 0;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .box-form-mail .text-mail {
+    margin: 1.25rem 0 0 0;
+    font-size: .875em;
+    padding: 0;
+  }
+
+  .question-input {
+    width: 40px;
+  }
+
+  .question-input svg {
+    right: -4%;
+    top: 20%;
+    width: 40px;
+  }
+
+  .text-trackless-form {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .pass-f {
+    display: block;
+    margin-bottom: .5rem;
+  }
+
+  .pass-r {
+    display: block;
+  }
+
+  .bg-imagebox {
+    padding: 3vw 0;
+    width: 350px;
+    margin: auto;
+  }
+
+  .footer-logo-center {
+    top: 0%;
+    width: 350px;
+    margin: auto;
+  }
+
+  .footer-logo {
+    width: 300px;
+  }
+
+  .icon-sosmed img {
+    width: 40px;
+  }
+
+  .footer-contact>h2,
+  .footer-contact>span {
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-contact>h2 {
+    font-size: 36px;
+  }
+
+  .footer-contact>span {
+    font-size: 16px;
+  }
+
+  .footer-menus {
+    padding-top: 5rem;
+  }
+
+  .footer-menus a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0 .5rem;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    transition: all ease .4s;
+  }
+
+  .footer-menus a:hover {
+    text-decoration: none;
+    color: #00DD9C;
+    transition: all ease .4s;
+  }
+
+  .footer-menus a.active {
+    text-decoration: none;
+    color: #00DD9C;
+    font-weight: 500;
+    transition: all ease .4s;
+  }
+
+  .footer-menus a.active:hover {
+    text-decoration: none;
+    color: #fff;
+    transition: all ease .4s;
+  }
+}
+
+@media (min-width: 1400px) {
+
+
+  .box-form-rpw {
+    padding: 2rem 0rem;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10rem;
+  }
+
+  .box-form-rpw input {
+    margin: 1rem 0;
+    font-size: 16px;
+  }
+
+  .box-form-rpw .text-mail {
+    margin: 1.25rem 0 0 0;
+    color: #00DD9C;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .btn-back-green {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    border: none;
+    border-radius: 100px;
+    background: #00DD9C !important;
+    color: #fff !important;
+    padding: .5rem;
+  }
+
+  .navbar-brand img {
+    width: 300px;
+  }
+
+  .bg-trackless svg {
+    width: 57px !important;
+    height: auto !important;
+  }
+
+  .slider {
+    padding-bottom: 1rem !important;
+  }
+
+  .slider h1 {
+    font-size: 44px;
+    line-height: 60px;
+  }
+
+  .slider p {
+    font-size: 25px;
+    line-height: 38px;
+  }
+
+  aside,
+  section {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
+
+  .box-bottom-slider .text-box {
+    font-size: 16px;
+  }
+
+  .box-bottom-slider svg {
+    width: 50px;
+    height: auto;
+  }
+
+  .responsive-text .text-green-content {
+    font-size: 36px;
+  }
+
+  .responsive-text .text-trackless {
+    font-size: 20px;
+  }
+
+  .box-form-mail {
+    padding: 2.5rem 2.5rem;
+    border: 2px solid #00DD9C;
+    border-radius: 10px;
+  }
+
+  .box-form-mail input {
+    margin: 1rem 0;
+    background: #F5F5FA;
+    border-radius: 40px;
+    border-right: none;
+    height: 40px;
+    font-size: .875em;
+  }
+
+  .input-group-text-trackless {
+    margin: 1rem 0;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .box-form-mail .text-mail {
+    margin: 1.25rem 0 0 0;
+    font-size: .875em;
+    padding: 0;
+  }
+
+  .question-input {
+    width: 40px;
+  }
+
+  .question-input svg {
+    right: -5%;
+    top: 20%;
+    width: 40px;
+  }
+
+  .text-trackless-form {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .pass-f {
+    display: block;
+    margin-bottom: .5rem;
+  }
+
+  .pass-r {
+    display: block;
+  }
+
+  .bg-imagebox {
+    padding: 3vw 0;
+    width: 350px;
+    margin: auto;
+  }
+
+  .footer-logo-center {
+    top: 0%;
+    width: 350px;
+    margin: auto;
+  }
+
+  .footer-logo {
+    width: 300px;
+  }
+
+  .icon-sosmed img {
+    width: 40px;
+  }
+
+  .footer-contact>h2,
+  .footer-contact>span {
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-contact>h2 {
+    font-size: 36px;
+  }
+
+  .footer-contact>span {
+    font-size: 16px;
+  }
+
+  .footer-menus {
+    padding-top: 7rem;
+  }
+
+}
+
+@media (min-width: 1600px) {
+
+
+  .box-form-rpw {
+    padding: 2rem 0rem;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10rem;
+  }
+
+  .box-form-rpw input {
+    margin: 1rem 0;
+    font-size: 16px;
+  }
+
+  .box-form-rpw .text-mail {
+    margin: 1.25rem 0 0 0;
+    color: #00DD9C;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .btn-back-green {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    border: none;
+    border-radius: 100px;
+    background: #00DD9C !important;
+    color: #fff !important;
+    padding: .5rem;
+  }
+
+  .navbar-brand img {
+    width: 300px;
+  }
+
+  .bg-trackless svg {
+    width: 57px !important;
+    height: auto !important;
+  }
+
+  .slider {
+    padding-bottom: 1rem !important;
+  }
+
+  .slider h1 {
+    font-size: 44px;
+    line-height: 60px;
+  }
+
+  .slider p {
+    font-size: 25px;
+    line-height: 38px;
+  }
+
+  aside,
+  section {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
+
+  .box-bottom-slider .text-box {
+    font-size: 16px;
+  }
+
+  .box-bottom-slider svg {
+    width: 50px;
+    height: auto;
+  }
+
+  .responsive-text .text-green-content {
+    font-size: 36px;
+  }
+
+  .responsive-text .text-trackless {
+    font-size: 20px;
+  }
+
+  .box-form-mail {
+    padding: 2.5rem 2.5rem;
+    border: 2px solid #00DD9C;
+    border-radius: 10px;
+  }
+
+  .box-form-mail input {
+    margin: 1rem 0;
+    background: #F5F5FA;
+    border-radius: 40px;
+    border-right: none;
+    height: 40px;
+    font-size: .875em;
+  }
+
+  .input-group-text-trackless {
+    margin: 1rem 0;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .box-form-mail .text-mail {
+    margin: 1.25rem 0 0 0;
+    font-size: .875em;
+    padding: 0;
+  }
+
+  .question-input {
+    width: 40px;
+  }
+
+  .question-input svg {
+    right: -5%;
+    top: 20%;
+    width: 40px;
+  }
+
+  .text-trackless-form {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .pass-f {
+    display: block;
+    margin-bottom: .5rem;
+  }
+
+  .pass-r {
+    display: block;
+  }
+
+  .bg-imagebox {
+    padding: 3vw 0;
+    width: 350px;
+    margin: auto;
+  }
+
+  .footer-logo-center {
+    top: 0%;
+    width: 350px;
+    margin: auto;
+  }
+
+  .footer-logo {
+    width: 300px;
+  }
+
+  .icon-sosmed img {
+    width: 50px;
+  }
+
+  .footer-contact>h2,
+  .footer-contact>span {
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-contact>h2 {
+    font-size: 36px;
+  }
+
+  .footer-contact>span {
+    font-size: 16px;
+  }
+
+  .footer-menus {
+    padding-top: 10rem;
+  }
 }
