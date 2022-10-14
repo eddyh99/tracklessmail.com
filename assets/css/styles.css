@@ -12630,6 +12630,18 @@ footer a:focus {
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 
+.modal-trackless {
+  background: #000000;
+  border: 1px solid #00DD9C;
+  border-radius: 20px;
+  color: #fff;
+  padding: 1rem 1rem 2rem 1rem;
+}
+
+.modal-trackless .btn-close {
+  color: #fff !important;
+}
+
 .text-green-trackless {
   color: #00DD9C;
   font-family: 'Red Hat Display', sans-serif;
@@ -13060,7 +13072,7 @@ footer a:focus {
   }
 
   .footer-logo {
-    width: 150px;
+    width: 100px;
   }
 
   .icon-sosmed img {
@@ -13087,8 +13099,8 @@ footer a:focus {
   .footer-menus a {
     text-decoration: none;
     font-weight: 400;
-    font-size: 11px;
-    margin: 0 .5rem;
+    font-size: 7px;
+    margin: .5rem .5rem;
     color: #fff;
     font-family: 'Inter', sans-serif;
     transition: all ease .4s;
@@ -13261,7 +13273,7 @@ footer a:focus {
   }
 
   .footer-logo {
-    width: 150px;
+    width: 100px;
   }
 
   .icon-sosmed img {
@@ -13288,7 +13300,7 @@ footer a:focus {
   .footer-menus a {
     text-decoration: none;
     font-weight: 400;
-    font-size: 11px;
+    font-size: 12px;
     margin: 0 .5rem;
     color: #fff;
     font-family: 'Inter', sans-serif;
@@ -13497,7 +13509,7 @@ footer a:focus {
   .footer-menus a {
     text-decoration: none;
     font-weight: 400;
-    font-size: 11px;
+    font-size: 12px;
     margin: 0 .5rem;
     color: #fff;
     font-family: 'Inter', sans-serif;

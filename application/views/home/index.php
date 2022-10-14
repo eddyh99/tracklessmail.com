@@ -1,7 +1,7 @@
 <nav class="navbar bg-black">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src="<?= base_url();?>assets/images/tc-mail-new.png">
+            <img src="<?= base_url(); ?>assets/images/tc-mail-new.png">
         </a>
         <a href="https://tracklessproject.com" class="bg-trackless me-5" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -33,7 +33,7 @@
             <div class="col-lg-6 d-none d-sm-none d-lg-inline">
                 <!-- Masthead device mockup feature-->
                 <div class="masthead-device-mockup text-center">
-                    <img class="img-fluid" src="<?= base_url();?>assets/images/phone.png" alt="">
+                    <img class="img-fluid" src="<?= base_url(); ?>assets/images/phone.png" alt="">
                 </div>
             </div>
         </div>
@@ -190,13 +190,15 @@
                                 <div class="col question-input">
                                     <input type="text" class="form-control" id=""
                                         placeholder="EMAIL TO RECOVERY PASSWORD">
-                                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="19" cy="19" r="18.5" stroke="#00DD9C" />
-                                        <path
-                                            d="M18.375 10.35C20.025 10.35 21.3583 10.8167 22.375 11.75C23.3917 12.6833 23.9 13.9333 23.9 15.5C23.9 17.25 23.3583 18.55 22.275 19.4C21.1917 20.2333 19.725 20.65 17.875 20.65L17.8 23.025H15.825L15.725 19.075H16.45C18.1 19.075 19.3917 18.825 20.325 18.325C21.2583 17.825 21.725 16.8833 21.725 15.5C21.725 14.5 21.425 13.7083 20.825 13.125C20.225 12.5417 19.4167 12.25 18.4 12.25C17.3667 12.25 16.55 12.5333 15.95 13.1C15.3667 13.65 15.075 14.4083 15.075 15.375H12.925C12.925 14.375 13.15 13.5 13.6 12.75C14.05 11.9833 14.6833 11.3917 15.5 10.975C16.3333 10.5583 17.2917 10.35 18.375 10.35ZM16.8 28.15C16.3667 28.15 16 28 15.7 27.7C15.4 27.4 15.25 27.0333 15.25 26.6C15.25 26.1667 15.4 25.8 15.7 25.5C16 25.2 16.3667 25.05 16.8 25.05C17.2167 25.05 17.5667 25.2 17.85 25.5C18.15 25.8 18.3 26.1667 18.3 26.6C18.3 27.0333 18.15 27.4 17.85 27.7C17.5667 28 17.2167 28.15 16.8 28.15Z"
-                                            fill="#00DD9C" />
-                                    </svg>
+                                    <a data-bs-toggle="modal" href="#exampleModalToggle" role="button">
+                                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="19" cy="19" r="18.5" stroke="#00DD9C" />
+                                            <path
+                                                d="M18.375 10.35C20.025 10.35 21.3583 10.8167 22.375 11.75C23.3917 12.6833 23.9 13.9333 23.9 15.5C23.9 17.25 23.3583 18.55 22.275 19.4C21.1917 20.2333 19.725 20.65 17.875 20.65L17.8 23.025H15.825L15.725 19.075H16.45C18.1 19.075 19.3917 18.825 20.325 18.325C21.2583 17.825 21.725 16.8833 21.725 15.5C21.725 14.5 21.425 13.7083 20.825 13.125C20.225 12.5417 19.4167 12.25 18.4 12.25C17.3667 12.25 16.55 12.5333 15.95 13.1C15.3667 13.65 15.075 14.4083 15.075 15.375H12.925C12.925 14.375 13.15 13.5 13.6 12.75C14.05 11.9833 14.6833 11.3917 15.5 10.975C16.3333 10.5583 17.2917 10.35 18.375 10.35ZM16.8 28.15C16.3667 28.15 16 28 15.7 27.7C15.4 27.4 15.25 27.0333 15.25 26.6C15.25 26.1667 15.4 25.8 15.7 25.5C16 25.2 16.3667 25.05 16.8 25.05C17.2167 25.05 17.5667 25.2 17.85 25.5C18.15 25.8 18.3 26.1667 18.3 26.6C18.3 27.0333 18.15 27.4 17.85 27.7C17.5667 28 17.2167 28.15 16.8 28.15Z"
+                                                fill="#00DD9C" />
+                                        </svg>
+                                    </a>
                                 </div>
                             </div>
 
@@ -245,32 +247,32 @@
     <div class="container-fluid px-md-5">
         <div class="container">
             <div class="bg-imagebox">
-                <img src="<?=base_url()?>assets/images/trackless-fit.png" alt="" class="footer-logo-center">
+                <img src="<?= base_url() ?>assets/images/trackless-fit.png" alt="" class="footer-logo-center">
             </div>
             <div class="d-flex justify-content-around">
                 <div class="col-4">
-                    <img src="<?= base_url();?>assets/images/footer-logo.png" class="footer-logo">
+                    <img src="<?= base_url(); ?>assets/images/footer-logo.png" class="footer-logo">
                     <div class="d-flex flex-wrap icon-sosmed">
                         <div class="me-md-2 me-lg-2 me-xl-3 mt-3">
-                            <img src="<?=base_url()?>assets/images/fb-icon.png" class="p-1">
+                            <img src="<?= base_url() ?>assets/images/fb-icon.png" class="p-1">
                         </div>
                         <div class="me-md-2 me-lg-2 me-xl-3 mt-3">
-                            <img src="<?=base_url()?>assets/images/twitter-icon.png" class="p-1">
+                            <img src="<?= base_url() ?>assets/images/twitter-icon.png" class="p-1">
                         </div>
                         <div class="me-md-2 me-lg-2 me-xl-3 mt-3">
-                            <img src="<?=base_url()?>assets/images/ig-icon.png" class="p-1">
+                            <img src="<?= base_url() ?>assets/images/ig-icon.png" class="p-1">
                         </div>
                         <div class="me-md-2 me-lg-2 me-xl-3 mt-3">
-                            <img src="<?=base_url()?>assets/images/c-icon.png" class="p-1">
+                            <img src="<?= base_url() ?>assets/images/c-icon.png" class="p-1">
                         </div>
                         <div class="me-md-2 me-lg-2 me-xl-3 mt-3">
-                            <img src="<?=base_url()?>assets/images/linkedin-icon.png" class="p-1">
+                            <img src="<?= base_url() ?>assets/images/linkedin-icon.png" class="p-1">
                         </div>
                         <div class="me-md-2 me-lg-2 me-xl-3 mt-3">
-                            <img src="<?=base_url()?>assets/images/tiktok-icon.png" class="p-1">
+                            <img src="<?= base_url() ?>assets/images/tiktok-icon.png" class="p-1">
                         </div>
                         <div class="me-md-2 me-lg-2 me-xl-3 mt-3">
-                            <img src="<?=base_url()?>assets/images/youtube-icon.png" class="p-1">
+                            <img src="<?= base_url() ?>assets/images/youtube-icon.png" class="p-1">
                         </div>
                     </div>
                 </div>
@@ -292,3 +294,25 @@
         </div>
     </div>
 </footer>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-trackless">
+            <div class="modal-header border-0">
+                <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path
+                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                This email will be used only for password recovery and all the information, included your email, are
+                encrypted SHA256 on NP blockchain and obfuscated with CRYPTONOTE protocol
+            </div>
+        </div>
+    </div>
+</div>
