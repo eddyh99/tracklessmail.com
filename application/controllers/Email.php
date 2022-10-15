@@ -374,7 +374,7 @@ class Email extends CI_Controller {
 		$mail->Host			= 'mail.tracklessmail.com';
 		$mail->SMTPAuth		= true;
 		$mail->Username		= 'no-reply@tracklessmail.com';
-		$mail->Password		= 'gkRcoPUj*I.k';
+		$mail->Password		= '';
 		$mail->SMTPAutoTLS	= false;
 		$mail->SMTPSecure	= false;
 		$mail->Port			= 587;           
