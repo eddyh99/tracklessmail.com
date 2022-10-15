@@ -303,7 +303,7 @@ class Email extends CI_Controller {
     	//{{{ Start - creating cpanel email account
         $email_user     = $anonmail;  // if email address is mail@dmainname.com then email should be mail
         $email_password = $pass; // password to access email account in cpanel
-        $email_domain   = 'mifmail.vip';
+        $email_domain   = 'tracklessmail.com';
 
         $xmlapi->password_auth(CPANEL_USER, CPANEL_PASSWORD);
         $xmlapi->set_output('json');        
@@ -371,15 +371,15 @@ class Email extends CI_Controller {
 		$mail = $this->phpmailer_lib->load();
 				   
 		$mail->isSMTP();
-		$mail->Host			= 'mail.moneyindustrialfactory.io';
+		$mail->Host			= 'mail.tracklessmail.com';
 		$mail->SMTPAuth		= true;
-		$mail->Username		= 'no-reply@moneyindustrialfactory.io';
-		$mail->Password		= 'G7VfsqbnH}k}';
+		$mail->Username		= 'no-reply@tracklessmail.com';
+		$mail->Password		= 'gkRcoPUj*I.k';
 		$mail->SMTPAutoTLS	= false;
 		$mail->SMTPSecure	= false;
 		$mail->Port			= 587;           
 
-		$mail->setFrom('no-reply@mifmail.vip', 'Mif Mail');
+		$mail->setFrom('no-reply@tracklessmail.com', 'Trackless Mail');
 		$mail->isHTML(true);
 
 		$mail->ClearAllRecipients();
