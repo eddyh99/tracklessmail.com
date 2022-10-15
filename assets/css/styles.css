@@ -13736,8 +13736,6 @@ footer a:focus {
 }
 
 @media (min-width: 1200px) {
-
-
   .box-form-rpw {
     padding: 2rem 0rem;
     border: none;
@@ -13883,7 +13881,7 @@ footer a:focus {
   }
 
   .icon-sosmed img {
-    width: 40px;
+    width: 50px;
   }
 
   .footer-contact>h2,
