@@ -12960,11 +12960,11 @@ footer a:focus {
   }
 
   .navbar-brand img {
-    width: 200px;
+    width: 175px;
   }
 
   .bg-trackless svg {
-    width: 45px !important;
+    width: 35px !important;
     height: auto !important;
   }
 
@@ -12989,7 +12989,7 @@ footer a:focus {
   }
 
   .box-bottom-slider .text-box {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .box-bottom-slider svg {
@@ -13002,7 +13002,8 @@ footer a:focus {
   }
 
   .responsive-text .text-trackless {
-    font-size: 16px;
+    font-size: 12px !important;
+    line-height: 180%;
   }
 
   .box-form-mail {
@@ -13018,7 +13019,7 @@ footer a:focus {
     border-radius: 40px;
     border-right: none;
     height: 40px;
-    font-size: .875em;
+    font-size: .55em;
   }
 
   .input-group-text-trackless {
@@ -13028,7 +13029,7 @@ footer a:focus {
 
   .box-form-mail .text-mail {
     margin: 1rem 0 0 0;
-    font-size: .875em;
+    font-size: .55em;
     padding: 0;
   }
 
@@ -13044,30 +13045,36 @@ footer a:focus {
   }
 
   .text-trackless-form {
-    font-size: 16px;
+    font-size: 12px;
     line-height: 25px;
   }
 
   .pass-f {
     display: block;
+    font-size: 12px;
     margin-bottom: .5rem;
   }
 
   .pass-r {
     display: block;
+    font-size: 12px;
+  }
+
+  .btn-trackless {
+    font-size: 12px;
   }
 
   .bg-imagebox {
     position: relative;
     padding: 3vw 0;
-    width: 150px;
+    width: 100px;
     margin: auto;
   }
 
   .footer-logo-center {
     position: absolute;
     top: 0%;
-    width: 150px;
+    width: 100px;
     margin: auto;
   }
 
@@ -13085,7 +13092,7 @@ footer a:focus {
   }
 
   .footer-contact>h2 {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .footer-contact>span {

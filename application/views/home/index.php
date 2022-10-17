@@ -253,25 +253,25 @@
                 <div class="col-4">
                     <img src="<?= base_url(); ?>assets/images/footer-logo.png" class="footer-logo">
                     <div class="d-flex flex-wrap icon-sosmed">
-                        <div class="me-md-2 me-lg-2 me-xl-3 mt-3">
+                        <div class="me-md-2 me-lg-2 me-xl-3 mt-1 mt-sm-3">
                             <img src="<?= base_url() ?>assets/images/fb-icon.png" class="p-1">
                         </div>
-                        <div class="me-md-2 me-lg-2 me-xl-3 mt-3">
+                        <div class="me-md-2 me-lg-2 me-xl-3 mt-1 mt-sm-3">
                             <img src="<?= base_url() ?>assets/images/twitter-icon.png" class="p-1">
                         </div>
-                        <div class="me-md-2 me-lg-2 me-xl-3 mt-3">
+                        <div class="me-md-2 me-lg-2 me-xl-3 mt-1 mt-sm-3">
                             <img src="<?= base_url() ?>assets/images/ig-icon.png" class="p-1">
                         </div>
-                        <div class="me-md-2 me-lg-2 me-xl-3 mt-3">
+                        <div class="me-md-2 me-lg-2 me-xl-3 mt-1 mt-sm-3">
                             <img src="<?= base_url() ?>assets/images/c-icon.png" class="p-1">
                         </div>
-                        <div class="me-md-2 me-lg-2 me-xl-3 mt-3">
+                        <div class="me-md-2 me-lg-2 me-xl-3 mt-1 mt-sm-3">
                             <img src="<?= base_url() ?>assets/images/linkedin-icon.png" class="p-1">
                         </div>
-                        <div class="me-md-2 me-lg-2 me-xl-3 mt-3">
+                        <div class="me-md-2 me-lg-2 me-xl-3 mt-1 mt-sm-3">
                             <img src="<?= base_url() ?>assets/images/tiktok-icon.png" class="p-1">
                         </div>
-                        <div class="me-md-2 me-lg-2 me-xl-3 mt-3">
+                        <div class="me-md-2 me-lg-2 me-xl-3 mt-1 mt-sm-3">
                             <img src="<?= base_url() ?>assets/images/youtube-icon.png" class="p-1">
                         </div>
                     </div>
@@ -283,14 +283,14 @@
                 </div>
             </div>
         </div>
-        <div translate="no" class="d-flex flex-wrap justify-content-end footer-menus">
+        <div class="d-flex flex-wrap justify-content-end footer-menus">
             <a href="https://tracklessproject.com" class="">TracklessProject</a> |
-            <a href="#" class="active">TracklessMail</a> |
-            <a href="#" class="">TracklessChat</a> |
-            <a href="#" class="">TracklessCompany</a> |
+            <a href="https://tracklessmail.com" class="active">TracklessMail</a> |
+            <a href="https://tracklesschat.com" class="">TracklessChat</a> |
+            <a href="https://tracklesscompany.com" class="">TracklessCompany</a> |
             <a href="https://tracklessbank.com" class="">TracklessBank</a> |
-            <a href="#" class="">TracklessCrypto</a> |
-            <a href="#" class="">TracklessMoney</a>
+            <a href="https://tracklesscrypto.com" class="">TracklessCrypto</a> |
+            <a href="https://tracklessmoney.com" class="">TracklessMoney</a>
         </div>
     </div>
 </footer>
