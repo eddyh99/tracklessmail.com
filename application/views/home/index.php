@@ -283,12 +283,12 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex flex-wrap justify-content-end footer-menus">
+        <div translate="no" class="d-flex flex-wrap justify-content-end footer-menus">
             <a href="https://tracklessproject.com" class="">TracklessProject</a> |
             <a href="#" class="active">TracklessMail</a> |
             <a href="#" class="">TracklessChat</a> |
             <a href="#" class="">TracklessCompany</a> |
-            <a href="#" class="">TracklessBank</a> |
+            <a href="https://tracklessbank.com" class="">TracklessBank</a> |
             <a href="#" class="">TracklessCrypto</a> |
             <a href="#" class="">TracklessMoney</a>
         </div>
