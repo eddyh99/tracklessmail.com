@@ -12808,13 +12808,6 @@ footer a:focus {
   font-size: 15px;
   line-height: 22px;
   margin-bottom: 1rem;
-  transition: all ease .4s;
-}
-
-.pass-f:hover {
-  text-decoration: none;
-  color: #fff;
-  transition: all ease .4s;
 }
 
 .pass-r {

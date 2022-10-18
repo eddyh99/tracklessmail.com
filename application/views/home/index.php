@@ -264,8 +264,8 @@
                                 <div class="col mt-3">
                                     <div class="d-lg-flex">
                                         <div class="p-2 flex-shrink-1">
-                                            <a href="#" class="pass-f">Forgot
-                                                password?</a>
+                                            <span class="pass-f">Forgot
+                                                password?</span>
                                             <a href="<?= base_url(); ?>auth/resetpw" class="pass-r">Reset password</a>
                                         </div>
                                         <div class="p-2 col-12 col-md-12 col-lg-9 text-center">

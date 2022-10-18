@@ -80,7 +80,6 @@ class Emailmodel extends CI_Model{
 		}else{
 			return array("code"=>2022,"message"=>"Invalid reset code, please try again");
 		}
-	    
 	}
     
     public function updatecode($email){
@@ -88,4 +87,3 @@ class Emailmodel extends CI_Model{
         $this->db->query($sql,$email);
     }
 }
-?>

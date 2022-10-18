@@ -23,7 +23,8 @@ class Auth extends CI_Controller
 	{
 		$data = array(
 			'title'     => 'Trackless Mail - Reset Password',
-			'content'   => 'home/info',
+			'content'   => 'home/resetpw',
+			'extra'     => 'home/js/js_index',
 		);
 		$this->load->view('layout/wrapper', $data);
 	}
