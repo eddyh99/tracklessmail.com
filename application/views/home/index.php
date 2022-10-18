@@ -146,11 +146,25 @@
             </div>
             <div class="col-12 col-md-10 col-lg-12 p-0 px-lg-4 col-xxl-8">
                 <div class="box-form-mail">
-                    <form>
-                        <div class="col-11 col-lg-10">
+                    <div class="col-12">
+                        <?php if (isset($_SESSION["failed"])) { ?>
+                        <div class="alert alert-warning" role="alert">
+                            <?= @$_SESSION["success"] ?>
+                        </div>
+                        <?php } ?>
+
+                        <?php if (isset($_SESSION["success"])) { ?>
+                        <div class="alert alert-info" role="alert">
+                            <?= @$_SESSION["success"] ?>
+                        </div>
+                        <?php } ?>
+                    </div>
+                    <form method="POST" action="<?= base_url('email/createemail'); ?>" autocomplete="off"
+                        autocapitalize="none">
+                        <div class="col-11 col-lg-11">
                             <div class="row">
                                 <div class="col-6 col-md-8 col-lg-9">
-                                    <input type="text" class="form-control" id="" placeholder="EMAIL">
+                                    <input type="text" name="anonmail" class="form-control" id="" placeholder="EMAIL">
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 text-mail">
                                     @tracklessmail.com
@@ -159,8 +173,8 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group">
-                                        <input type="password" class="form-control eye" placeholder="PASSWORD"
-                                            id="password1">
+                                        <input type="password" name="password1" class="form-control eye"
+                                            placeholder="PASSWORD" id="password1">
                                         <div class="input-group-text-trackless">
                                             <span>
                                                 <i class="fa fa-eye-slash" id="togglePassword1"
@@ -168,14 +182,30 @@
                                             </span>
                                         </div>
                                     </div>
+                                    <div id="pswd_info">
+                                        Password must meet the following requirements:
+                                        <ul>
+                                            <li id="letter" class="invalid">At least <strong>one letter</strong></li>
+                                            <li id="capital" class="invalid">At least <strong>one capital
+                                                    letter</strong></li>
+                                            <li id="number" class="invalid">At least <strong>one number</strong></li>
+                                            <li id="length" class="invalid">Be at least <strong>9 characters</strong>
+                                            </li>
+                                            <li id="special" class="invalid">Contains at least <strong>2 special
+                                                    character</strong> ^!@#$%^&*\-_=+ </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-1 col-sm-1 col-md-1 d-flex align-items-center">
+                                    <img src="" width="0" height="0" id="validpass" style="margin-left:15px">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group">
-                                        <input type="password" class="form-control eye" placeholder="CONFIRM PASSWORD"
-                                            id="password2">
+                                        <input type="password" name="password2" class="form-control eye"
+                                            placeholder="CONFIRM PASSWORD" id="password2">
                                         <div class="input-group-text-trackless">
                                             <span>
                                                 <i class="fa fa-eye-slash" id="togglePassword2"
@@ -184,11 +214,14 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-1 col-sm-1 col-md-1 d-flex align-items-center">
+                                    <img src="" width="0" height="0" id="confpass" style="margin-left:15px">
+                                </div>
                             </div>
 
                             <div class="row">
                                 <div class="col question-input">
-                                    <input type="text" class="form-control" id=""
+                                    <input type="text" name="emailrecovery" class="form-control" id=""
                                         placeholder="EMAIL TO RECOVERY PASSWORD">
                                     <a data-bs-toggle="modal" href="#exampleModalToggle" role="button">
                                         <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
@@ -200,12 +233,18 @@
                                         </svg>
                                     </a>
                                 </div>
+                                <div class="col-1 col-sm-1 col-md-1 d-flex align-items-center">
+                                    <img src="" width="0" height="0" id="validpass" style="margin-left:15px">
+                                </div>
                             </div>
 
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" class="form-control" id=""
+                                    <input type="text" name="confirmemailrecovery" class="form-control" id=""
                                         placeholder="CONFIRM EMAIL TO RECOVERY PASSWORD">
+                                </div>
+                                <div class="col-1 col-sm-1 col-md-1 d-flex align-items-center">
+                                    <img src="" width="0" height="0" id="validpass" style="margin-left:15px">
                                 </div>
                             </div>
 
@@ -225,12 +264,12 @@
                                 <div class="col mt-3">
                                     <div class="d-lg-flex">
                                         <div class="p-2 flex-shrink-1">
-                                            <a href="#" class="pass-f">Forgot
-                                                password?</a>
+                                            <span class="pass-f">Forgot
+                                                password?</span>
                                             <a href="<?= base_url(); ?>auth/resetpw" class="pass-r">Reset password</a>
                                         </div>
                                         <div class="p-2 col-12 col-md-12 col-lg-9 text-center">
-                                            <button class="btn btn-trackless mt-5">Confirm</button>
+                                            <button type="submit" class="btn btn-trackless mt-5">Confirm</button>
                                         </div>
                                     </div>
                                 </div>

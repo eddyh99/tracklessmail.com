@@ -10,12 +10,14 @@
         <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
             <div class="col-12">
                 <div class="box-form-rpw">
-                    <form>
+                    <form method="POST" action="<?= base_url('email/resetpass'); ?>" autocomplete="off"
+                        autocapitalize="none">
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="col-12 col-sm-6 col-md-6">
                                 <div class="row">
                                     <div class="col-7">
-                                        <input type="text" class="form-control" id="" placeholder="EMAIL">
+                                        <input type="text" name="anonmail" class="form-control" id=""
+                                            placeholder="EMAIL">
                                     </div>
                                     <div class="col-5 text-mail">
                                         @tracklessmail.com
@@ -24,14 +26,14 @@
 
                                 <div class="row">
                                     <div class="col">
-                                        <input type="text" class="form-control" id=""
+                                        <input type="text" name="email" class="form-control" id=""
                                             placeholder="CONFIRM EMAIL TO RECOVERY PASSWORD">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col mt-0">
                                         <div class="text-center">
-                                            <button class="btn btn-trackless mt-5">Confirm</button>
+                                            <button type="submit" class="btn btn-trackless mt-5">Confirm</button>
                                         </div>
                                     </div>
                                 </div>

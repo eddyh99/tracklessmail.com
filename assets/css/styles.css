@@ -12808,13 +12808,6 @@ footer a:focus {
   font-size: 15px;
   line-height: 22px;
   margin-bottom: 1rem;
-  transition: all ease .4s;
-}
-
-.pass-f:hover {
-  text-decoration: none;
-  color: #fff;
-  transition: all ease .4s;
 }
 
 .pass-r {
@@ -12978,7 +12971,7 @@ footer a:focus {
   }
 
   .slider p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 30px;
   }
 
@@ -12990,6 +12983,7 @@ footer a:focus {
 
   .box-bottom-slider .text-box {
     font-size: 14px;
+    line-height: 180%;
   }
 
   .box-bottom-slider svg {
@@ -13002,7 +12996,7 @@ footer a:focus {
   }
 
   .responsive-text .text-trackless {
-    font-size: 12px !important;
+    font-size: 14px !important;
     line-height: 180%;
   }
 
@@ -13045,7 +13039,7 @@ footer a:focus {
   }
 
   .text-trackless-form {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 25px;
   }
 
@@ -13053,15 +13047,17 @@ footer a:focus {
     display: block;
     font-size: 12px;
     margin-bottom: .5rem;
+    font-size: 14px;
   }
 
   .pass-r {
     display: block;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .btn-trackless {
-    font-size: 12px;
+    padding: .5rem 2.5rem;
+    font-size: 14px;
   }
 
   .bg-imagebox {
@@ -14276,3 +14272,54 @@ footer a:focus {
     padding-top: 10rem;
   }
 }
+
+/* cpanel */
+
+#pswd_info {
+  display: none;
+}
+
+#pswd_info {
+  position: absolute;
+  width: 350px;
+  padding: 15px;
+  background: #fefefe;
+  font-size: .875em;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px #ccc;
+  border: 1px solid #ddd;
+  z-index: 99;
+}
+
+
+#pswd_info::before {
+  content: "\25B2";
+  position: absolute;
+  top: -12px;
+  left: 45%;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ddd;
+  text-shadow: none;
+  display: block;
+}
+
+#pswd_info li {
+  list-style: none;
+}
+
+.invalid {
+  background: url(../images/invalid.png) no-repeat 0 50%;
+  padding-left: 22px;
+  line-height: 24px;
+  color: #ec3f41;
+}
+
+.valid {
+  background: url(../images/accept.png) no-repeat 0 50%;
+  padding-left: 22px;
+  line-height: 24px;
+  color: #3a7d34;
+}
+
+/* cpanel */
