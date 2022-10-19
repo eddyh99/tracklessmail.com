@@ -18,40 +18,6 @@ class Email extends CI_Controller
 		include_once APPPATH . "third_party/xmlapi.php";
 	}
 
-	public function registeranonymousemail()
-	{
-		@$_SESSION["location"] = "email/registeranonymousemail";
-		if (@$_SESSION["site_lang"] == "italia") {
-			redirect(base_url() . "it/email/registeranonymousemail");
-		} elseif (@$_SESSION["site_lang"] == "french") {
-			redirect(base_url() . "fr/email/registeranonymousemail");
-		}
-
-		$data = array(
-			'title'		=> 'Anonymous Email | MIF - Money Industrial Factory',
-			'content'	=> 'regis/cpemail',
-			'extra'		=> 'regis/js/js_cpmail'
-		);
-		$this->load->view('layout/wrapper', $data);
-	}
-
-	public function confirm()
-	{
-		$data = array(
-			'title'		=> 'Confirm Registration | MIF - Money Industrial Factory',
-			'content'	=> 'regis/confirmregis',
-		);
-		$this->load->view('layout/wrapper', $data);
-	}
-
-	public function forgotpass()
-	{
-		$data = array(
-			'title'		=> 'Forgot Password | MIF - Money Industrial Factory',
-			'content'	=> 'regis/resetpass',
-		);
-		$this->load->view('layout/wrapper', $data);
-	}
 
 	public function checkaccount()
 	{
@@ -95,7 +61,7 @@ class Email extends CI_Controller
 		$anonregis	= $anonmail . "@tracklessmail.com";
 		$res		= $this->emailmodel->cekMail($anonregis);
 		if ($res["code"] != 0) {
-			$this->session->set_flashdata('failed', 'Mail sudah ada');
+			$this->session->set_flashdata('failed', 'anonymous mail has been Used, please try another id');
 			redirect(base_url() . "auth/index");
 			return;
 		}
@@ -113,7 +79,7 @@ class Email extends CI_Controller
 
 		$result = $this->emailmodel->insertMail($data);
 		if ($result["code"] == 2021) {
-			$this->session->set_flashdata('failed', 'Gagal input');
+			$this->session->set_flashdata('failed', 'Failed to open anonymous mail, please try again');
 			redirect(base_url() . "auth/index");
 			return;
 		}
@@ -251,10 +217,9 @@ class Email extends CI_Controller
 				"quota"     => $email_quota
 			));
 			$result = json_decode($result);
-
+            
 			if (isset($result->cpanelresult->data[0]->result)) {
 				if ($result->cpanelresult->data[0]->result == '1') {
-					$errmessage = "Email account created successfully, detail configuration has been sent to your email";
 					//init
 					$subject = "Anonymous Email Configuration";
 					$message = "
@@ -271,7 +236,8 @@ class Email extends CI_Controller
 					);
 					$this->emailmodel->activateMail($newdata, $email);
 					$this->sendmail($email, $subject, $message);
-					$this->session->set_flashdata('success', $errmessage);
+					
+					$this->session->set_flashdata('success', 'Email account created successfully, detail configuration has been sent to your email');
 					redirect(base_url() . "auth/index");
 					return;
 				} else {
@@ -287,6 +253,8 @@ class Email extends CI_Controller
 			} else {
 				$errmessage = "Unable to create this email account.";
 				$this->session->set_flashdata('failed', $errmessage);
+				redirect(base_url() . "auth/index");
+				return;
 			}
 		} catch (Exception $e) {
 		}
@@ -299,17 +267,43 @@ class Email extends CI_Controller
 
 	public function resetpass()
 	{
-		$this->form_validation->set_rules('anonmail', 'Email', 'trim|required');
-		$this->form_validation->set_rules('email', 'Email Recovery', 'trim|required');
+		$this->form_validation->set_rules('anonmail', 'Email',array(
+                'trim',
+                'required',
+		        array(
+                    'validate_anonmail',
+                    function($str) {
+                        if (!empty($str)){
+                            $i = $this->emailmodel->cek_valid_mail($str);
+    	                    if ($i) {
+    	                        return TRUE;
+    	                    } else {
+    	                        return FALSE;
+    	                    }
+                        }
+                    }
+                )
+            ),
+            array('validate_anonmail' => 'Account not found, please check it again')
+        );
+		$this->form_validation->set_rules('email', 'Email Recovery','trim|required');
+		
 		if ($this->form_validation->run() == FALSE) {
 			$this->session->set_flashdata('failed', validation_errors());
 			redirect(base_url() . "auth/resetpw");
 			return;
 		}
-
+        
 		$input		= $this->input;
-		$anonmail	= $this->security->xss_clean($input->post("anonmail"));
+		$email	    = $this->security->xss_clean($input->post("email"));
+		$anonmail   = $this->security->xss_clean($input->post("anonmail"));
 		$anonregis	= $anonmail . "@tracklessmail.com";
+        if (!$this->emailmodel->cek_mail_recovery($anonregis,$email)){
+			$this->session->set_flashdata('failed', "Wrong recovery mail for this account");
+			redirect(base_url() . "auth/resetpw");
+			return;
+        }
+
 		$res		= $this->emailmodel->resetMail($anonregis);
 		if ($res["code"] == 2021) {
 			$this->session->set_flashdata('failed', $res["message"]);
@@ -405,7 +399,7 @@ class Email extends CI_Controller
 		  </div>
 		</div>
 		<div class="link">
-		  <a href="' . base_url() . 'email/recovery/' . base64_encode($anonregis) . '/' . $res['tempcode'] . ' class="btn">Click here to reset your password</a>
+		  <a href="' . base_url() . 'email/recovery/' . base64_encode($anonregis) . '/' . $res['tempcode'] . '" class="btn">Click here to reset your password</a>
 		</div>
 	  </div>
 	  </body>
@@ -413,10 +407,7 @@ class Email extends CI_Controller
 
 		$this->sendmail($email, $subject, $message);
 
-		$flashmessage = "<hr>
-            Password reset email has been sent
-            <hr>
-            A password reset email has been set to the email address related to your account. Please wait at least 10 minutes before attempting another reset.";
+		$flashmessage = "A password reset email has been set to the email address related to your account. Please wait at least 10 minutes before attempting another reset.";
 
 		$this->session->set_flashdata('success', $flashmessage);
 		redirect(base_url() . "auth/index");

@@ -149,7 +149,7 @@
                     <div class="col-12">
                         <?php if (isset($_SESSION["failed"])) { ?>
                         <div class="alert alert-warning" role="alert">
-                            <?= @$_SESSION["success"] ?>
+                            <?= @$_SESSION["failed"] ?>
                         </div>
                         <?php } ?>
 

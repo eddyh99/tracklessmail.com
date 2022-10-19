@@ -14,6 +14,25 @@ class Emailmodel extends CI_Model{
 		}
 	}
 	
+	public function cek_valid_mail($anonregis){
+	    $anonregis=$anonregis.'@tracklessmail.com';
+		$sql="SELECT * FROM ".$this->regismail." WHERE anonmail=? AND activate='1'";
+		$query=$this->db->query($sql,$anonregis);
+		if ($query->num_rows()>0){
+			return 1;
+		}
+	}
+
+	public function cek_mail_recovery($anonregis,$recovery){
+		$sql="SELECT * FROM ".$this->regismail." WHERE anonmail=? AND email=? AND activate='1'";
+		$query=$this->db->query($sql,array($anonregis,$recovery));
+		if ($query->num_rows()>0){
+			return 1;
+		}
+	}
+	
+
+	
 	public function insertMail($data){
 	    $sql="SELECT activate FROM ".$this->regismail." WHERE anonmail=?";
 	    $query=$this->db->query($sql,$data["anonmail"]);

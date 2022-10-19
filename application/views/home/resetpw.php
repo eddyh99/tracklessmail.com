@@ -10,9 +10,26 @@
         <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
             <div class="col-12">
                 <div class="box-form-rpw">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="col-12 col-sm-6 col-md-6">
+                            <?php if (isset($_SESSION["failed"])) { ?>
+                            <div class="alert alert-warning" role="alert">
+                                <?= @$_SESSION["failed"] ?>
+                            </div>
+                            <?php } ?>
+        
+                            <?php if (isset($_SESSION["success"])) { ?>
+                            <div class="alert alert-info" role="alert">
+                                <?= @$_SESSION["success"] ?>
+                            </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                    
                     <form method="POST" action="<?= base_url('email/resetpass'); ?>" autocomplete="off"
                         autocapitalize="none">
                         <div class="d-flex justify-content-center align-items-center">
+
                             <div class="col-12 col-sm-6 col-md-6">
                                 <div class="row">
                                     <div class="col-7">
