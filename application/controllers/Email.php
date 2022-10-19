@@ -137,57 +137,62 @@ class Email extends CI_Controller
 	
 	
 		.body {
-		  width: 100%;
-		  background: #000;
-		  color: #fff;
-		  padding: 1rem 1rem;
-		  padding-bottom: 5rem;
-		  height: auto;
-		}
-	
-		.img-logo {
-		  position: absolute;
-		  top: 0;
-		  left: 0;
-		}
-	
-		
-		.img-mail {
+			width: 100%;
+			background: #000;
+			color: #fff;
+			padding: 1rem 1rem;
+			padding-bottom: 5rem;
+			height: auto;
+		  }
+	  
+		  .img-logo {
+			position: absolute;
+			top: 0;
+			left: 0;
+		  }
+	  
+	  
+		  .img-mail {
 			width: 100%;
 			max-width: 480px;
-		}
-	
-		.col-12 {
-		  width: 100%;
-		}
-	
-		.content {
-		  width: 75%;
-		  max-width: 720px;
-		  text-align: center;
-		  margin: auto;
-		  font-size: 18px;
-		}
-	
-		.info {
-		  display: flex;
-		  justify-content: center;
-		}
-	
-		.link {
-		  width: 75%;
-		  max-width: 720px;
-		  margin: auto;
-		  text-align: center;
-		}
-	
-		.btn {
-		  padding: 1rem 2rem;
-		  background: #00DD9C;
-		  border-radius: 10px;
-		  text-decoration: none;
-		  color: #000;
-		}
+		  }
+	  
+		  .col-12 {
+			width: 100%;
+		  }
+	  
+		  .content {
+			width: 75%;
+			max-width: 720px;
+			text-align: center;
+			margin: auto;
+			font-size: 18px;
+		  }
+	  
+		  .link {
+			width: 75%;
+			max-width: 720px;
+			margin: auto;
+			text-align: center;
+		  }
+	  
+		  .btn {
+			padding: 1rem 2rem;
+			background: #00DD9C;
+			border-radius: 10px;
+			text-decoration: none;
+			color: #000;
+		  }
+
+		  .btn:hover{
+			color: #000;
+		  }
+	  
+		  .info {
+			margin: .5rem 0;
+			padding: 2rem 0;
+			box-sizing: border-box;
+		  }
 	  </style>
 		</head>
 	
@@ -200,14 +205,7 @@ class Email extends CI_Controller
 		  <p>To activate the anonymous email please click the link received in your recovery mail</p>
 		  <img src="http://tracklessmail.com/assets/images/mail.png" alt="" class="img-mail"><br>
 		  <div class="info">
-			<svg width="30" height="30" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg"
-			  style="margin: 2rem 1rem;">
-			  <circle cx="22.5" cy="22.5" r="22" stroke="#00DD9C" />
-			  <path
-				d="M22.9912 13.93L22.6532 26.54H20.1832L19.8452 13.93H22.9912ZM21.5092 32.182C20.9719 32.182 20.5212 32 20.1572 31.636C19.7932 31.272 19.6112 30.8213 19.6112 30.284C19.6112 29.7467 19.7932 29.296 20.1572 28.932C20.5212 28.568 20.9719 28.386 21.5092 28.386C22.0292 28.386 22.4712 28.568 22.8352 28.932C23.1992 29.296 23.3812 29.7467 23.3812 30.284C23.3812 30.8213 23.1992 31.272 22.8352 31.636C22.4712 32 22.0292 32.182 21.5092 32.182Z"
-				fill="#00DD9C" />
-			</svg>
-			<span style="margin: .5rem 0; padding: 2rem 0;box-sizing: border-box; ">
+			<span>
 			  If you do not find the email check into your
 			  spam folder
 			</span>
@@ -336,57 +334,58 @@ class Email extends CI_Controller
 	
 	
 		.body {
-		  width: 100%;
-		  background: #000;
-		  color: #fff;
-		  padding: 1rem 1rem;
-		  padding-bottom: 5rem;
-		  height: auto;
-		}
-	
-		.img-logo {
-		  position: absolute;
-		  top: 0;
-		  left: 0;
-		}
-	
-		
-		.img-mail {
+			width: 100%;
+			background: #000;
+			color: #fff;
+			padding: 1rem 1rem;
+			padding-bottom: 5rem;
+			height: auto;
+		  }
+	  
+		  .img-logo {
+			position: absolute;
+			top: 0;
+			left: 0;
+		  }
+	  
+	  
+		  .img-mail {
 			width: 100%;
 			max-width: 480px;
-		}
-	
-		.col-12 {
-		  width: 100%;
-		}
-	
-		.content {
-		  width: 75%;
-		  max-width: 720px;
-		  text-align: center;
-		  margin: auto;
-		  font-size: 18px;
-		}
-	
-		.info {
-		  display: flex;
-		  justify-content: center;
-		}
-	
-		.link {
-		  width: 75%;
-		  max-width: 720px;
-		  margin: auto;
-		  text-align: center;
-		}
-	
-		.btn {
-		  padding: 1rem 2rem;
-		  background: #00DD9C;
-		  border-radius: 10px;
-		  text-decoration: none;
-		  color: #000;
-		}
+		  }
+	  
+		  .col-12 {
+			width: 100%;
+		  }
+	  
+		  .content {
+			width: 75%;
+			max-width: 720px;
+			text-align: center;
+			margin: auto;
+			font-size: 18px;
+		  }
+	  
+		  .link {
+			width: 75%;
+			max-width: 720px;
+			margin: auto;
+			text-align: center;
+		  }
+	  
+		  .btn {
+			padding: 1rem 2rem;
+			background: #00DD9C;
+			border-radius: 10px;
+			text-decoration: none;
+			color: #000;
+		  }
+	  
+		  .info {
+			margin: .5rem 0;
+			padding: 2rem 0;
+			box-sizing: border-box;
+		  }
 	  </style>
 		</head>
 	
@@ -399,14 +398,7 @@ class Email extends CI_Controller
 		  <p>To activate the anonymous email please click the link received in your recovery mail</p>
 		  <img src="http://tracklessmail.com/assets/images/mail.png" alt="" class="img-mail"><br>
 		  <div class="info">
-			<svg width="30" height="30" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg"
-			  style="margin: 2rem 1rem;">
-			  <circle cx="22.5" cy="22.5" r="22" stroke="#00DD9C" />
-			  <path
-				d="M22.9912 13.93L22.6532 26.54H20.1832L19.8452 13.93H22.9912ZM21.5092 32.182C20.9719 32.182 20.5212 32 20.1572 31.636C19.7932 31.272 19.6112 30.8213 19.6112 30.284C19.6112 29.7467 19.7932 29.296 20.1572 28.932C20.5212 28.568 20.9719 28.386 21.5092 28.386C22.0292 28.386 22.4712 28.568 22.8352 28.932C23.1992 29.296 23.3812 29.7467 23.3812 30.284C23.3812 30.8213 23.1992 31.272 22.8352 31.636C22.4712 32 22.0292 32.182 21.5092 32.182Z"
-				fill="#00DD9C" />
-			</svg>
-			<span style="margin: .5rem 0; padding: 2rem 0;box-sizing: border-box; text-align: center;">
+			<span>
 			  If you do not find the email check into your
 			  spam folder
 			</span>
@@ -570,6 +562,7 @@ class Email extends CI_Controller
 		$mail->SMTPAuth		= true;
 		$mail->Username		= 'no-reply@tracklessmail.com';
 		$mail->Password		= 'k]qo6uUroZ1k';
+		// $mail->SMTPDebug    = 2;
 		$mail->SMTPAutoTLS	= true;
 		$mail->SMTPSecure	= "tls";
 		$mail->Port			= 587;
@@ -612,56 +605,57 @@ class Email extends CI_Controller
 	
 	
 		.body {
-		  width: 100%;
-		  background: #000;
-		  color: #fff;
-		  padding: 1rem 1rem;
-		  padding-bottom: 5rem;
-		  height: auto;
+		width: 100%;
+		background: #000;
+		color: #fff;
+		padding: 1rem 1rem;
+		padding-bottom: 5rem;
+		height: auto;
 		}
 	
 		.img-logo {
-		  position: absolute;
-		  top: 0;
-		  left: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
 		}
 	
-		
+	
 		.img-mail {
-			width: 100%;
-			max-width: 480px;
+		width: 100%;
+		max-width: 480px;
 		}
 	
 		.col-12 {
-		  width: 100%;
+		width: 100%;
 		}
 	
 		.content {
-		  width: 75%;
-		  max-width: 720px;
-		  text-align: center;
-		  margin: auto;
-		  font-size: 18px;
-		}
-	
-		.info {
-		  display: flex;
-		  justify-content: center;
+		width: 75%;
+		max-width: 720px;
+		text-align: center;
+		margin: auto;
+		font-size: 18px;
 		}
 	
 		.link {
-		  width: 75%;
-		  max-width: 720px;
-		  margin: auto;
-		  text-align: center;
+		width: 75%;
+		max-width: 720px;
+		margin: auto;
+		text-align: center;
 		}
 	
 		.btn {
-		  padding: 1rem 2rem;
-		  background: #00DD9C;
-		  border-radius: 10px;
-		  text-decoration: none;
-		  color: #000;
+		padding: 1rem 2rem;
+		background: #00DD9C;
+		border-radius: 10px;
+		text-decoration: none;
+		color: #000;
+		}
+	
+		.info {
+		margin: .5rem 0;
+		padding: 2rem 0;
+		box-sizing: border-box;
 		}
 	  </style>
 		</head>
@@ -675,14 +669,7 @@ class Email extends CI_Controller
 		  <p>To activate the anonymous email please click the link received in your recovery mail</p>
 		  <img src="http://tracklessmail.com/assets/images/mail.png" alt="" class="img-mail"><br>
 		  <div class="info">
-			<svg width="30" height="30" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg"
-			  style="margin: 2rem 1rem;">
-			  <circle cx="22.5" cy="22.5" r="22" stroke="#00DD9C" />
-			  <path
-				d="M22.9912 13.93L22.6532 26.54H20.1832L19.8452 13.93H22.9912ZM21.5092 32.182C20.9719 32.182 20.5212 32 20.1572 31.636C19.7932 31.272 19.6112 30.8213 19.6112 30.284C19.6112 29.7467 19.7932 29.296 20.1572 28.932C20.5212 28.568 20.9719 28.386 21.5092 28.386C22.0292 28.386 22.4712 28.568 22.8352 28.932C23.1992 29.296 23.3812 29.7467 23.3812 30.284C23.3812 30.8213 23.1992 31.272 22.8352 31.636C22.4712 32 22.0292 32.182 21.5092 32.182Z"
-				fill="#00DD9C" />
-			</svg>
-			<span style="text-align: center; margin: .5rem 0; padding: 2rem 0;box-sizing: border-box; ">
+			<span>
 			  If you do not find the email check into your
 			  spam folder
 			</span>
@@ -722,7 +709,7 @@ class Email extends CI_Controller
 		$mail->Subject = 'Anonymous Email Configuration';
 		$mail->Body    = $message;
 		$mail->IsHTML(true);
-		$mail->AddAddress('adipurnama42@tracklessmail.com');
+		$mail->AddAddress('mamugeming00@gmail.com');
 
 		// $mail->msgHTML($message);
 		$mail->send();
