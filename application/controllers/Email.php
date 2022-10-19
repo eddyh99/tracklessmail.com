@@ -183,6 +183,10 @@ class Email extends CI_Controller
 			text-decoration: none;
 			color: #000;
 		  }
+
+		  .btn:hover{
+			color: #000;
+		  }
 	  
 		  .info {
 			margin: .5rem 0;
