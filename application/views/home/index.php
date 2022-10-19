@@ -21,12 +21,8 @@
                 <!-- Mashead text and app badges-->
                 <div class="mb-5 mb-lg-0 text-center text-lg-start">
                     <h1 class="text-green-trackless text-green-trackless--header display-5 lh-md mb-3">Protect your
-                        privacy and anonymity
-                        with
-                        Trackless
-                        Mail. </h1>
-                    <p class="text-trackless lead fw-normal mb-5">Open your email, anonymous and untraceable,
-                        in a few
+                        privacy and anonymity with Trackless Mail.</h1>
+                    <p class="text-trackless lead fw-normal mb-5">Open your email, anonymous and untraceable, in a few
                         simple steps</p>
                 </div>
             </div>
@@ -98,8 +94,8 @@
             </div>
             <div class="col-12 col-md-3 box-bottom-slider">
                 <div class="d-flex align-items-start flex-column mb-3" style="height: 200px;">
-                    <div class="mb-auto pt-5 pt-md-4 pt-xl-5 text-box" style="width: 100%;">Use the configuration data
-                        on
+                    <div class="mb-auto pt-5 pt-md-4 pt-xl-5 text-box" style="width: 100%;">Use the Use the
+                        configuration data on
                         an email client to access</div>
                     <div class="p-4" style="width: 100%;">
                         <svg width="50" height="50" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -137,8 +133,7 @@
                 <h1 class="text-green-content lh-1 mb-4">START NOW
                 </h1>
                 <p class="text-trackless mb-5 mb-lg-0" style="font-size: 20px;">The email that you will provide will be
-                    used
-                    exclusively for password recovery.
+                    used exclusively for password recovery.
                     All the data saved in the server will be double-key encrypted in SHA256.
                     This will make it impossible to associate an email with the account created.
                     It will not be possible to recover or decrypt any data from the server even with forensic
@@ -251,13 +246,9 @@
                             <div class="row">
                                 <div class="col">
                                     <p class="text-trackless-form mt-3">To increase your privacy and to do not keep
-                                        track of
-                                        your
-                                        IP address, the only
-                                        way
-                                        to
-                                        check and send your email it will just using an email client such as Mozilla
-                                        Thunderbird, Outlook express, Mail Android, etc...</p>
+                                        track of your IP address, the only way to check and send your email it will just
+                                        using an email client such as Mozilla Thunderbird, Outlook express, Mail
+                                        Android, etc...</p>
                                 </div>
                             </div>
                             <div class="row">

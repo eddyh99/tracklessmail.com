@@ -164,21 +164,17 @@ class Email extends CI_Controller
 	
 	  <body>
 	  <div class="body">
-		<div class="col-12">
-		  <img src="http://tracklessmail.com/assets/images/logo-polos.png" alt="logo" width="150">
-		</div>
 		<div class="content">
-		  <p>To activate the anonymous email please click the link received in your recovery mail</p>
+		  <p>Activate the anonymous email by clicking the button below</p>
 		  <img src="http://tracklessmail.com/assets/images/mail.png" alt="" class="img-mail"><br>
 		  <div class="info">
 			<span>
-			  If you do not find the email check into your
-			  spam folder
+			To increase your privacy and to do not keep track of your IP address, the only way to check your email it will be just by using an email client such as Mozilla Thunderbird, Outlook express, Mail Android, etc...
 			</span>
 		  </div>
 		</div>
 		<div class="link">
-		  <a href="' . base_url() . 'email/activate?key=' . urlencode(base64_encode($encrypted)) . '" class="btn">Activate account</a>
+		  <a href="' . base_url() . 'email/activate?key=' . urlencode(base64_encode($encrypted)) . '" class="btn">Activate email</a>
 		</div>
 	  </div>
 	  </body>
@@ -187,7 +183,7 @@ class Email extends CI_Controller
 		$this->sendmail($email, $subject, $message);
 		$this->session->set_flashdata('success', "Thank you for registering Anonymous Email, You need activate the email before use it.");
 
-		redirect(base_url() . "auth/index");
+		redirect(base_url() . "auth/succes_regis");
 	}
 
 	public function activate()
@@ -217,28 +213,143 @@ class Email extends CI_Controller
 				"quota"     => $email_quota
 			));
 			$result = json_decode($result);
-            
+
 			if (isset($result->cpanelresult->data[0]->result)) {
 				if ($result->cpanelresult->data[0]->result == '1') {
 					//init
 					$subject = "Anonymous Email Configuration";
-					$message = "
-            		Here's your anonymous email configuration<br><br>
-            		Incoming Server : mail.tracklessmail.com<br>
-            		IMAP Port: 993 POP3 Port: 995<br><br>
-            		Outgoing Server : mail.tracklessmail.com<br> 
-            		SMTP Port: 465<br><br>
-            		IMAP, POP3, and SMTP require authentication.
-            		";
+					$message = '
+					
+<html>
+
+<head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+    * {
+      box-sizing: border-box;
+      font-family: "Poppins";
+    }
+
+
+    .body {
+      width: 100%;
+      background: #000;
+      color: #fff;
+      padding: 1rem 1rem;
+      padding-bottom: 5rem;
+      height: auto;
+    }
+
+    .col-12 {
+      width: 100%;
+    }
+
+    .content {
+      width: 75%;
+      max-width: 720px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    .info {
+      margin: .5rem 0;
+      padding: 1rem 0;
+      box-sizing: border-box;
+    }
+
+    .w-25 {
+      width: 25% !important;
+    }
+
+    .border-0 {
+      border: 0 !important;
+    }
+
+    .table tr,
+    .table tr>td {
+      padding: 0.5rem 0.5rem;
+    }
+
+    .green {
+      color: #00DD9C;
+    }
+
+    .green-bold {
+      color: #00DD9C;
+      font-weight: 700;
+    }
+
+    @media (max-width: 460px) {
+      .content {
+        width: 100%;
+        max-width: 720px;
+        margin: auto;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="body">
+    <div class="content">
+      <p>These are your configuration data to enter on an email client :</p>
+      <div class="info">
+        <p class="green-bold">Configuration Data</p>
+        <div class="table-responsive">
+          <table class="table align-middle border border-0 text-white">
+            <tbody>
+              <tr>
+                <td class="w-25 border border-0">Incoming Server</td>
+                <td class="border border-0">:</td>
+                <td class="border border-0"> mail.tracklessmail.com</td>
+              </tr>
+              <tr>
+                <td class="w-25 border border-0">IMAP Port</td>
+                <td class="border border-0">:</td>
+                <td class="green border border-0"> 993
+                </td>
+              </tr>
+              <tr>
+                <td class="w-25 border border-0">POP3 Port</td>
+                <td class="border border-0">:</td>
+                <td class="green border border-0"> 995
+                </td>
+              </tr>
+              <tr>
+                <td class="w-25 border border-0">Outgoing Server</td>
+                <td class="border border-0">:</td>
+                <td class="border border-0"> mail.tracklessmail.com
+                </td>
+              </tr>
+              <tr>
+                <td class="w-25 border border-0">SMTP Port</td>
+                <td class="border border-0">:</td>
+                <td class="green border border-0"> 465
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+            		';
 					$newdata = array(
 						"activate"  => 1,
 						"timecreate" => date("Y-m-d H:i:s")
 					);
 					$this->emailmodel->activateMail($newdata, $email);
 					$this->sendmail($email, $subject, $message);
-					
-					$this->session->set_flashdata('success', 'Email account created successfully, detail configuration has been sent to your email');
-					redirect(base_url() . "auth/index");
+
+					$this->session->set_flashdata('success', 'The email account has been created successfully !
+					Your details configuration has been sent to your recovery mail, check it now');
+					redirect(base_url() . "auth/info_activate?mail=" . substr($data[0], 0, -18) . '&email=' . $email);
 					return;
 				} else {
 					if (strpos($result->cpanelresult->data[0]->reason, "it is too weak")) {
@@ -267,42 +378,45 @@ class Email extends CI_Controller
 
 	public function resetpass()
 	{
-		$this->form_validation->set_rules('anonmail', 'Email',array(
-                'trim',
-                'required',
-		        array(
-                    'validate_anonmail',
-                    function($str) {
-                        if (!empty($str)){
-                            $i = $this->emailmodel->cek_valid_mail($str);
-    	                    if ($i) {
-    	                        return TRUE;
-    	                    } else {
-    	                        return FALSE;
-    	                    }
-                        }
-                    }
-                )
-            ),
-            array('validate_anonmail' => 'Account not found, please check it again')
-        );
-		$this->form_validation->set_rules('email', 'Email Recovery','trim|required');
-		
+		$this->form_validation->set_rules(
+			'anonmail',
+			'Email',
+			array(
+				'trim',
+				'required',
+				array(
+					'validate_anonmail',
+					function ($str) {
+						if (!empty($str)) {
+							$i = $this->emailmodel->cek_valid_mail($str);
+							if ($i) {
+								return TRUE;
+							} else {
+								return FALSE;
+							}
+						}
+					}
+				)
+			),
+			array('validate_anonmail' => 'Account not found, please check it again')
+		);
+		$this->form_validation->set_rules('email', 'Email Recovery', 'trim|required');
+
 		if ($this->form_validation->run() == FALSE) {
 			$this->session->set_flashdata('failed', validation_errors());
 			redirect(base_url() . "auth/resetpw");
 			return;
 		}
-        
+
 		$input		= $this->input;
 		$email	    = $this->security->xss_clean($input->post("email"));
 		$anonmail   = $this->security->xss_clean($input->post("anonmail"));
 		$anonregis	= $anonmail . "@tracklessmail.com";
-        if (!$this->emailmodel->cek_mail_recovery($anonregis,$email)){
+		if (!$this->emailmodel->cek_mail_recovery($anonregis, $email)) {
 			$this->session->set_flashdata('failed', "Wrong recovery mail for this account");
 			redirect(base_url() . "auth/resetpw");
 			return;
-        }
+		}
 
 		$res		= $this->emailmodel->resetMail($anonregis);
 		if ($res["code"] == 2021) {
@@ -399,7 +513,7 @@ class Email extends CI_Controller
 		  </div>
 		</div>
 		<div class="link">
-		  <a href="' . base_url() . 'email/recovery/' . base64_encode($anonregis) . '/' . $res['tempcode'] . '" class="btn">Click here to reset your password</a>
+		  <a href="' . base_url() . 'email/recovery/' . base64_encode($anonregis) . '/' . $res['tempcode'] . '/ ' . $email . '" class="btn">Click here to reset your password</a>
 		</div>
 	  </div>
 	  </body>
@@ -414,10 +528,11 @@ class Email extends CI_Controller
 		return;
 	}
 
-	public function recovery($email, $code)
+	public function recovery($email, $code, $gmail)
 	{
 		$emailbaru = base64_decode($this->security->xss_clean($email));
 		$code = $this->security->xss_clean($code);
+		$gmail = $this->security->xss_clean($gmail);
 
 		// echo $this->openssl->decrypt($emailbaru, ENCRYPTION_KEY);
 		// echo $emailbaru . " " . $email;
@@ -434,6 +549,7 @@ class Email extends CI_Controller
 			'title'		=> 'New Password | Tracklessmail',
 			'email'     => $emailbaru,
 			'code'      => $code,
+			'gmail'      => $gmail,
 			'content'	=> 'home/recoverypass',
 			'extra'     => 'home/js/js_index',
 		);
@@ -447,6 +563,7 @@ class Email extends CI_Controller
 
 		$input		= $this->input;
 		$anonmail	= $this->security->xss_clean($input->post("anonemail"));
+		$gmail		= $this->security->xss_clean($input->post("gmail"));
 		$code	    = $this->security->xss_clean($input->post("code"));
 		$pass		= $this->security->xss_clean($input->post("pass"));
 		$confpass	= $this->security->xss_clean($input->post("confirmpass"));
@@ -456,7 +573,7 @@ class Email extends CI_Controller
 
 		if ($this->form_validation->run() == FALSE) {
 			$this->session->set_flashdata('failed', validation_errors());
-			redirect(base_url() . "email/recovery/" . base64_encode($anonmail) . "/" . $code);
+			redirect(base_url() . "email/recovery/" . base64_encode($anonmail) . "/" . $code . '/' . $gmail);
 			return;
 		}
 
@@ -464,7 +581,7 @@ class Email extends CI_Controller
 		if (!preg_match('/(?=[A-Za-z0-9!@#$%^&*\-_=+]+$)^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*(?:[^!@#$%^&*\-_=+]*[!@#$%^&*\-_=+]){2})(?=.{9,}).*$/', $pass)) {
 
 			$this->session->set_flashdata('failed', "Invalid Password. Password should contain 1 Uppercase, 1 lowercase, 1 Numeric and 2 Special Charaters");
-			redirect(base_url() . "email/recovery/" . base64_encode($anonmail) . "/" . $code);
+			redirect(base_url() . "email/recovery/" . base64_encode($anonmail) . "/" . $code . '/' . $gmail);
 			return;
 		}
 
@@ -498,24 +615,21 @@ class Email extends CI_Controller
 					$this->emailmodel->updateCode($anonmail);
 					$errmessage = "Your Password is successfully changed, please relogin your anonymous email with current password";
 					$this->session->set_flashdata('success', $errmessage);
-					redirect(base_url() . "auth/index");
+					redirect(base_url() . "auth/info_activate?mail=" . substr($anonmail, 0, -18) . "&email=" . $gmail);
 				} else {
 					if (strpos($result->cpanelresult->data[0]->reason, "it is too weak")) {
-
-						echo $this->form_validation->run() . 'sss';
-						die;
 						$errmessage = "Your choosen password is to weak, please try again";
 					} else {
 						$errmessage = "Error while changing password. Please try again ";
 					}
 					$this->session->set_flashdata('failed', $errmessage);
-					redirect(base_url() . "email/recovery/" . base64_encode($anonmail) . "/" . $code);
+					redirect(base_url() . "email/recovery/" . base64_encode($anonmail) . "/" . $code . '/' . $gmail);
 					return;
 				}
 			} else {
 				$errmessage = "failed to change password this email account.";
 				$this->session->set_flashdata('failed', $errmessage);
-				redirect(base_url() . "email/recovery/" . base64_encode($anonmail) . "/" . $code);
+				redirect(base_url() . "email/recovery/" . base64_encode($anonmail) . "/" . $code . '/' . $gmail);
 				return;
 			}
 		} catch (Exception $e) {
