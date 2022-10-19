@@ -274,6 +274,8 @@ class Email extends CI_Controller
 					$this->emailmodel->activateMail($newdata, $email);
 					$this->sendmail($email, $subject, $message);
 					$this->session->set_flashdata('success', $errmessage);
+					redirect(base_url() . "auth/index");
+					return;
 				} else {
 					if (strpos($result->cpanelresult->data[0]->reason, "it is too weak")) {
 						$errmessage = "Your choosen password is to weak, please try again";
@@ -404,7 +406,7 @@ class Email extends CI_Controller
 				d="M22.9912 13.93L22.6532 26.54H20.1832L19.8452 13.93H22.9912ZM21.5092 32.182C20.9719 32.182 20.5212 32 20.1572 31.636C19.7932 31.272 19.6112 30.8213 19.6112 30.284C19.6112 29.7467 19.7932 29.296 20.1572 28.932C20.5212 28.568 20.9719 28.386 21.5092 28.386C22.0292 28.386 22.4712 28.568 22.8352 28.932C23.1992 29.296 23.3812 29.7467 23.3812 30.284C23.3812 30.8213 23.1992 31.272 22.8352 31.636C22.4712 32 22.0292 32.182 21.5092 32.182Z"
 				fill="#00DD9C" />
 			</svg>
-			<span style="margin: .5rem 0; padding: 2rem 0;box-sizing: border-box; ">
+			<span style="margin: .5rem 0; padding: 2rem 0;box-sizing: border-box; text-align: center;">
 			  If you do not find the email check into your
 			  spam folder
 			</span>
@@ -568,7 +570,6 @@ class Email extends CI_Controller
 		$mail->SMTPAuth		= true;
 		$mail->Username		= 'no-reply@tracklessmail.com';
 		$mail->Password		= 'k]qo6uUroZ1k';
-		$mail->SMTPDebug    = 2;
 		$mail->SMTPAutoTLS	= true;
 		$mail->SMTPSecure	= "tls";
 		$mail->Port			= 587;
@@ -681,7 +682,7 @@ class Email extends CI_Controller
 				d="M22.9912 13.93L22.6532 26.54H20.1832L19.8452 13.93H22.9912ZM21.5092 32.182C20.9719 32.182 20.5212 32 20.1572 31.636C19.7932 31.272 19.6112 30.8213 19.6112 30.284C19.6112 29.7467 19.7932 29.296 20.1572 28.932C20.5212 28.568 20.9719 28.386 21.5092 28.386C22.0292 28.386 22.4712 28.568 22.8352 28.932C23.1992 29.296 23.3812 29.7467 23.3812 30.284C23.3812 30.8213 23.1992 31.272 22.8352 31.636C22.4712 32 22.0292 32.182 21.5092 32.182Z"
 				fill="#00DD9C" />
 			</svg>
-			<span style="margin: .5rem 0; padding: 2rem 0;box-sizing: border-box; ">
+			<span style="text-align: center; margin: .5rem 0; padding: 2rem 0;box-sizing: border-box; ">
 			  If you do not find the email check into your
 			  spam folder
 			</span>
