@@ -28,4 +28,24 @@ class Auth extends CI_Controller
 		);
 		$this->load->view('layout/wrapper', $data);
 	}
+
+	public function succes_regis()
+	{
+		$data = array(
+			'title'     => 'Trackless Mail',
+			'content'   => 'home/notif-mail',
+			'extra'     => 'home/js/js_index',
+		);
+		$this->load->view('layout/wrapper', $data);
+	}
+
+	public function info_activate()
+	{
+		$data = array(
+			'title'     => 'Trackless Mail',
+			'content'   => 'home/info-activate',
+			'extra'     => 'home/js/js_index',
+		);
+		$this->load->view('layout/wrapper', $data);
+	}
 }

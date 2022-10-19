@@ -30,6 +30,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <input type="text" name="anonemail" value="<?= $email ?>" hidden>
+                                        <input type="text" name="gmail" value="<?= $gmail ?>" hidden>
                                         <input type="text" name="code" value="<?= $code ?>" hidden>
                                         <div class="input-group">
                                             <input type="password" name="pass" class="form-control eye"
