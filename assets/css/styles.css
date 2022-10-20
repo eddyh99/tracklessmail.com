@@ -12692,12 +12692,21 @@ footer a:focus {
 
 .logo-notif {
   position: absolute;
-  top: 2%;
-  left: 2%;
+  top: 0%;
+  left: 0%;
   border: none;
-  border-radius: 100px;
   padding: 1rem 1rem;
   width: 200px;
+}
+
+.close-notif {
+  position: absolute;
+  top: 2%;
+  right: 5%;
+}
+
+.m-trackless {
+  margin-top: 5rem;
 }
 
 .navbar-brand img {
@@ -12912,12 +12921,21 @@ footer a:focus {
 @media (max-width: 575px) {
   .logo-notif {
     position: absolute;
-    top: 2%;
-    left: 2%;
+    top: 0%;
+    left: 0%;
     border: none;
-    border-radius: 100px;
     padding: 1rem 1rem;
-    width: 200px;
+    width: 150px;
+  }
+
+  .close-notif {
+    position: absolute;
+    top: 2%;
+    right: 5%;
+  }
+
+  .m-trackless {
+    margin-top: 7.5rem;
   }
 
   .box-form-rpw {
@@ -13131,6 +13149,25 @@ footer a:focus {
 
 @media (min-width: 576px) {
 
+  .logo-notif {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    border: none;
+    padding: 1rem 1rem;
+    width: 150px;
+  }
+
+  .close-notif {
+    position: absolute;
+    top: 2%;
+    right: 5%;
+  }
+
+  .m-trackless {
+    margin-top: 7.5rem;
+  }
+
   .box-form-rpw {
     padding: 2rem 0rem;
     border: none;
@@ -13331,16 +13368,6 @@ footer a:focus {
 }
 
 @media (min-width: 768px) {
-  .logo-notif {
-    position: absolute;
-    top: 2%;
-    left: 2%;
-    border: none;
-    border-radius: 100px;
-    padding: 1rem 1rem;
-    width: 200px;
-  }
-
   .box-form-rpw {
     padding: 2rem 0rem;
     border: none;
@@ -13739,6 +13766,25 @@ footer a:focus {
 }
 
 @media (min-width: 1200px) {
+  .logo-notif {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    border: none;
+    padding: 1rem 1rem;
+    width: 200px;
+  }
+
+  .close-notif {
+    position: absolute;
+    top: 2.5%;
+    right: 5%;
+  }
+
+  .m-trackless {
+    margin-top: 7.5rem;
+  }
+
   .box-form-rpw {
     padding: 2rem 0rem;
     border: none;
