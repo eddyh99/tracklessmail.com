@@ -17,7 +17,7 @@
                                 <?= @$_SESSION["failed"] ?>
                             </div>
                             <?php } ?>
-        
+
                             <?php if (isset($_SESSION["success"])) { ?>
                             <div class="alert alert-info" role="alert">
                                 <?= @$_SESSION["success"] ?>
@@ -25,38 +25,34 @@
                             <?php } ?>
                         </div>
                     </div>
-                    
-                    <form method="POST" action="<?= base_url('email/resetpass'); ?>" autocomplete="off"
-                        autocapitalize="none">
-                        <div class="d-flex justify-content-center align-items-center">
-
-                            <div class="col-12 col-sm-6 col-md-6">
-                                <div class="row">
-                                    <div class="col-7">
-                                        <input type="text" name="anonmail" class="form-control" id=""
-                                            placeholder="EMAIL">
-                                    </div>
-                                    <div class="col-5 text-mail">
-                                        @tracklessmail.com
-                                    </div>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="col-12 col-sm-6 col-md-6">
+                            <div class="row">
+                                <div class="col-7">
+                                    <input type="text" name="anonmail" class="form-control" id="" placeholder="EMAIL"
+                                        value="<?= $_GET['mail']; ?>" readonly>
                                 </div>
-
-                                <div class="row">
-                                    <div class="col">
-                                        <input type="text" name="email" class="form-control" id=""
-                                            placeholder="CONFIRM EMAIL TO RECOVERY PASSWORD">
-                                    </div>
+                                <div class="col-5 text-mail">
+                                    @tracklessmail.com
                                 </div>
-                                <div class="row">
-                                    <div class="col mt-0">
-                                        <div class="text-center">
-                                            <button type="submit" class="btn btn-trackless mt-5">Confirm</button>
-                                        </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" name="email" class="form-control" id=""
+                                        placeholder="CONFIRM EMAIL TO RECOVERY PASSWORD" value="<?= $_GET['email']; ?>"
+                                        readonly>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col mt-0">
+                                    <div class="text-center">
+                                        <a href="<?= base_url('auth/'); ?>" class="btn btn-trackless mt-5">Done</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

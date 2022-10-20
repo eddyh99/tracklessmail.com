@@ -1,7 +1,15 @@
 <section class="bg-black">
     <div class="container-fluid px-5">
         <a href="<?= base_url(''); ?>auth/">
-            <img src="<?= base_url();?>assets/images/logo-polos.png" class="logo-notif">
+            <img src="<?= base_url(); ?>assets/images/logo-polos.png" class="logo-notif">
+        </a>
+        <a href="<?= base_url(''); ?>auth/">
+            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="close-notif">
+                <path
+                    d="M27.3751 15.6251L15.6251 27.3751M15.6251 15.6251L27.3751 27.3751M41.0834 21.5001C41.0834 32.3157 32.3157 41.0834 21.5001 41.0834C10.6845 41.0834 1.91675 32.3157 1.91675 21.5001C1.91675 10.6845 10.6845 1.91675 21.5001 1.91675C32.3157 1.91675 41.0834 10.6845 41.0834 21.5001Z"
+                    stroke="#00DD9C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
         </a>
         <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
             <div class="col-12">
@@ -14,7 +22,7 @@
                                         <div class="text-center text-trackless">
                                             <span class="inline-block">
                                                 To activate the anonymous email please click the link
-                                                received in your recovery mail
+                                                received in your recovery mail.
                                             </span>
                                             <div class="text-center">
                                                 <img class="img-fluid" src="<?= base_url(''); ?>assets/images/mail.png"
@@ -30,16 +38,6 @@
                                                 </svg>
                                                 If you do not find the email check into your spam folder
                                             </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col mt-4">
-                                        <div class="text-center">
-                                            <button class="btn btn-trackless mt-5">Contoh ke link</button>
-                                            <span class="d-block text-trackless mt-3">disini client receive link
-                                                lewat
-                                                email</span>
                                         </div>
                                     </div>
                                 </div>
