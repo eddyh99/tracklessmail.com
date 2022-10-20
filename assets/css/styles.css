@@ -12702,6 +12702,7 @@ footer a:focus {
 .close-notif {
   position: absolute;
   top: 2%;
+  float: right;
   right: 5%;
 }
 

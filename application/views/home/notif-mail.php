@@ -12,7 +12,7 @@
             </svg>
         </a>
         <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
-            <div class="col-12 m-trackless">
+            <div class="col-12 m-trackless mt-5">
                 <div class="d-flex justify-content-center align-items-center ">
                     <div class="col-12 col-md-10 col-lg-6">
                         <div class="row text-center">
