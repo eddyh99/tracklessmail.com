@@ -18,7 +18,6 @@ class Email extends CI_Controller
 		include_once APPPATH . "third_party/xmlapi.php";
 	}
 
-
 	public function checkaccount()
 	{
 		$this->form_validation->set_rules('username', 'Username', 'trim|required');
@@ -180,7 +179,7 @@ class Email extends CI_Controller
 	  </body>
 	  </html>';
 
-		$this->sendmail($email, $subject, $message);
+		sendmail($this->phpmailer_lib->load(), $email, $subject, $message);
 		$this->session->set_flashdata('success', "Thank you for registering Anonymous Email, You need activate the email before use it.");
 
 		redirect(base_url() . "auth/succes_regis");
@@ -214,8 +213,8 @@ class Email extends CI_Controller
 			));
 			$result = json_decode($result);
 
-			if (isset($result->cpanelresult->data[0]->result)) {
-				if ($result->cpanelresult->data[0]->result == '1') {
+			if (isset($result->cpanelresult->data->result)) {
+				if ($result->cpanelresult->data->result == '1') {
 					//init
 					$subject = "Anonymous Email Configuration";
 					$message = '
@@ -345,14 +344,14 @@ class Email extends CI_Controller
 						"timecreate" => date("Y-m-d H:i:s")
 					);
 					$this->emailmodel->activateMail($newdata, $email);
-					$this->sendmail($email, $subject, $message);
+					sendmail($this->phpmailer_lib->load(), $email, $subject, $message);
 
 					$this->session->set_flashdata('success', 'The email account has been created successfully !
 					Your details configuration has been sent to your recovery mail, check it now');
 					redirect(base_url() . "auth/info_activate?mail=" . substr($data[0], 0, -18) . '&email=' . $email);
 					return;
 				} else {
-					if (strpos($result->cpanelresult->data[0]->reason, "it is too weak")) {
+					if (strpos($result->cpanelresult->data->reason, "it is too weak")) {
 						$errmessage = "Your choosen password is to weak, please try again";
 					} else {
 						$errmessage = "Error while activating this email account. Please try again";
@@ -519,7 +518,7 @@ class Email extends CI_Controller
 	  </body>
 	  </html>';
 
-		$this->sendmail($email, $subject, $message);
+		sendmail($this->phpmailer_lib->load(), $email, $subject, $message);
 
 		$flashmessage = "A password reset email has been set to the email address related to your account. Please wait at least 10 minutes before attempting another reset.";
 
@@ -533,10 +532,6 @@ class Email extends CI_Controller
 		$emailbaru = base64_decode($this->security->xss_clean($email));
 		$code = $this->security->xss_clean($code);
 		$gmail = $this->security->xss_clean($gmail);
-
-		// echo $this->openssl->decrypt($emailbaru, ENCRYPTION_KEY);
-		// echo $emailbaru . " " . $email;
-		// die;
 
 		$res		= $this->emailmodel->cekcode($emailbaru, $code);
 		if ($res["code"] == 2022) {
@@ -567,9 +562,6 @@ class Email extends CI_Controller
 		$code	    = $this->security->xss_clean($input->post("code"));
 		$pass		= $this->security->xss_clean($input->post("pass"));
 		$confpass	= $this->security->xss_clean($input->post("confirmpass"));
-
-		// echo $anonmail . ' ' . $code . ' ' . $pass . ' ' . $confpass;
-		// die;
 
 		if ($this->form_validation->run() == FALSE) {
 			$this->session->set_flashdata('failed', validation_errors());
@@ -656,167 +648,5 @@ class Email extends CI_Controller
 			}
 		} catch (Exception $e) {
 		}
-	}
-
-	public function sendmail($email, $subject, $message)
-	{
-		$mail = $this->phpmailer_lib->load();
-
-		$mail->isSMTP();
-		$mail->Host			= 'mail.tracklessmail.com';
-		$mail->SMTPAuth		= true;
-		$mail->Username		= 'no-reply@tracklessmail.com';
-		$mail->Password		= 'k]qo6uUroZ1k';
-		// $mail->SMTPDebug    = 2;
-		$mail->SMTPAutoTLS	= true;
-		$mail->SMTPSecure	= "tls";
-		$mail->Port			= 587;
-		$mail->SMTPOptions = array(
-			'ssl' => array(
-				'verify_peer' => false,
-				'verify_peer_name' => false,
-				'allow_self_signed' => true
-			)
-		);
-
-		$mail->setFrom('no-reply@tracklessmail.com', 'Trackless Mail');
-		$mail->isHTML(true);
-
-		$mail->ClearAllRecipients();
-
-
-		$mail->Subject = $subject;
-		$mail->Body    = $message;
-		$mail->IsHTML(true);
-		$mail->AddAddress($email);
-
-		// $mail->msgHTML($message);
-		$mail->send();
-	}
-
-	public function testingsendmail()
-	{
-		$message = '
-		
-		<html>
-		<head>
-		<style>
-		@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-	
-		* {
-		  box-sizing: border-box;
-		  font-family: "Poppins";
-		}
-	
-	
-		.body {
-		width: 100%;
-		background: #000;
-		color: #fff;
-		padding: 1rem 1rem;
-		padding-bottom: 5rem;
-		height: auto;
-		}
-	
-		.img-logo {
-		position: absolute;
-		top: 0;
-		left: 0;
-		}
-	
-	
-		.img-mail {
-		width: 100%;
-		max-width: 480px;
-		}
-	
-		.col-12 {
-		width: 100%;
-		}
-	
-		.content {
-		width: 75%;
-		max-width: 720px;
-		text-align: center;
-		margin: auto;
-		font-size: 18px;
-		}
-	
-		.link {
-		width: 75%;
-		max-width: 720px;
-		margin: auto;
-		text-align: center;
-		}
-	
-		.btn {
-		padding: 1rem 2rem;
-		background: #00DD9C;
-		border-radius: 10px;
-		text-decoration: none;
-		color: #000;
-		}
-	
-		.info {
-		margin: .5rem 0;
-		padding: 2rem 0;
-		box-sizing: border-box;
-		}
-	  </style>
-		</head>
-	
-	  <body>
-	  <div class="body">
-		<div class="col-12">
-		  <img src="http://tracklessmail.com/assets/images/logo-polos.png" alt="logo" width="150">
-		</div>
-		<div class="content">
-		  <p>To activate the anonymous email please click the link received in your recovery mail</p>
-		  <img src="http://tracklessmail.com/assets/images/mail.png" alt="" class="img-mail"><br>
-		  <div class="info">
-			<span>
-			  If you do not find the email check into your
-			  spam folder
-			</span>
-		  </div>
-		</div>
-		<div class="link">
-		  <a href="" class="btn">Activate account</a>
-		</div>
-	  </div>
-	  </body>
-	  </html>';
-
-		$mail = $this->phpmailer_lib->load();
-
-		$mail->isSMTP();
-		$mail->Host			= 'mail.tracklessmail.com';
-		$mail->SMTPAuth		= true;
-		$mail->Username		= 'no-reply@tracklessmail.com';
-		$mail->Password		= 'k]qo6uUroZ1k';
-		$mail->SMTPDebug    = 2;
-		$mail->SMTPAutoTLS	= true;
-		$mail->SMTPSecure	= "tls";
-		$mail->Port			= 587;
-		$mail->SMTPOptions = array(
-			'ssl' => array(
-				'verify_peer' => false,
-				'verify_peer_name' => false,
-				'allow_self_signed' => true
-			)
-		);
-
-		$mail->setFrom('no-reply@tracklessmail.com', 'Trackless Mail');
-		$mail->isHTML(true);
-
-		$mail->ClearAllRecipients();
-
-		$mail->Subject = 'Anonymous Email Configuration';
-		$mail->Body    = $message;
-		$mail->IsHTML(true);
-		$mail->AddAddress('mamugeming00@gmail.com');
-
-		// $mail->msgHTML($message);
-		$mail->send();
 	}
 }
