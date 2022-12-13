@@ -367,6 +367,10 @@ class Email extends CI_Controller
 				return;
 			}
 		} catch (Exception $e) {
+			$errmessage = "Error while activating this email account. Please try again";
+			$this->session->set_flashdata('failed', $errmessage);
+			redirect(base_url() . "auth/index");
+			return;
 		}
 
 		//redirect(base_url()."email/confirm");
