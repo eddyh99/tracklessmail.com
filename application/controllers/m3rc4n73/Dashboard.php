@@ -13,6 +13,6 @@ class Dashboard extends CI_Controller
 
     public function index()
     {
-        redirect("cpanel/member");
+        redirect("m3rc4n73/member");
     }
 }
