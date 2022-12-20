@@ -53,16 +53,15 @@ class Auth extends CI_Controller
 		$user = $this->db->get_where('pengguna', ['email' => $uname])->row_array();
 
 		if ($user) {
-			if (password_verify($pass, $user['password'])) {
+			if (sha1($pass) == $user['password']) {
 				$data = [
 					'name' => $user['name'],
 					'id' => $user['id']
 				];
 				$this->session->set_userdata($data);
-
 				redirect('m3rc4n73/dashboard');
 			} else {
-				$this->session->set_flashdata('message', 'Password Is not valid');
+				$this->session->set_flashdata('message', 'Password Is not valid' . sha1($pass));
 				redirect('m3rc4n73/auth/login');
 			}
 		} else {
@@ -73,6 +72,6 @@ class Auth extends CI_Controller
 	public function logout()
 	{
 		$this->session->sess_destroy();
-		redirect('');
+		redirect('m3rc4n73/');
 	}
 }
