@@ -213,8 +213,8 @@ class Email extends CI_Controller
 			));
 			$result = json_decode($result);
 
-			if (isset($result->cpanelresult->data->result)) {
-				if ($result->cpanelresult->data->result == '1') {
+			if (isset($result->cpanelresult->data[0]->result)) {
+				if ($result->cpanelresult->data[0]->result == '1') {
 					//init
 					$subject = "Anonymous Email Configuration";
 					$message = '

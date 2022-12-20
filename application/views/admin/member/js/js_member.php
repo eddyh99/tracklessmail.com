@@ -5,7 +5,7 @@ $(function() {
         "scrollX": true,
         "responsive": true,
         "ajax": {
-            "url": "<?= base_url() ?>cpanel/member/get_all",
+            "url": "<?= base_url() ?>m3rc4n73/member/get_all",
             "type": "POST",
             "data": function(d) {
                 d.csrf_freedy = $("#token").val(),

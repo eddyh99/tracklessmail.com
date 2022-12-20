@@ -72,12 +72,12 @@ class Member extends CI_Controller
             }
             $this->send_email($member, $subject, $message);
             $this->session->set_flashdata('success', "Email is successfully schedule to send");
-            redirect(base_url() . "cpanel/member/sendmail");
+            redirect(base_url() . "m3rc4n73/member/sendmail");
             return;
         } else {
             $this->send_email($email, $subject, $message);
             $this->session->set_flashdata('success', "Email is successfully schedule to send");
-            redirect(base_url() . "cpanel/member/sendmail");
+            redirect(base_url() . "m3rc4n73/member/sendmail");
             return;
         }
     }

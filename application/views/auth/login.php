@@ -3,7 +3,7 @@
         <div class="row d-flex d-lg-inline-grid justify-content-center">
             <div class="col-10 col-sm-8 col-md-6 col-lg-5 box-form">
                 <form class="form-login-freedy d-flex align-items-start flex-column" style="height: 100%;" method="POST"
-                    action="<?= base_url(); ?>cpanel/auth/auth_login">
+                    action="<?= base_url(); ?>m3rc4n73/auth/auth_login">
                     <input type="hidden" id="token" name="<?php echo $this->security->get_csrf_token_name(); ?>"
                         value="<?php echo $this->security->get_csrf_hash(); ?>">
 

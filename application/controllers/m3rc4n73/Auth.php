@@ -11,7 +11,7 @@ class Auth extends CI_Controller
 	public function index()
 	{
 		if ($this->session->userdata('user_id')) {
-			redirect("cpanel/dashboard");
+			redirect("m3rc4n73/dashboard");
 		}
 
 		$data = array(
@@ -25,7 +25,7 @@ class Auth extends CI_Controller
 	public function login()
 	{
 		if ($this->session->userdata('user_id')) {
-			redirect("cpanel/dashboard");
+			redirect("m3rc4n73/dashboard");
 		}
 
 		$data = array(
@@ -43,7 +43,7 @@ class Auth extends CI_Controller
 
 		if ($this->form_validation->run() == FALSE) {
 			$this->session->set_flashdata('failed', validation_errors());
-			redirect(base_url() . "cpanel/auth/login");
+			redirect(base_url() . "m3rc4n73/auth/login");
 			return;
 		}
 
@@ -60,14 +60,14 @@ class Auth extends CI_Controller
 				];
 				$this->session->set_userdata($data);
 
-				redirect('cpanel/dashboard');
+				redirect('m3rc4n73/dashboard');
 			} else {
 				$this->session->set_flashdata('message', 'Password Is not valid');
-				redirect('cpanel/auth/login');
+				redirect('m3rc4n73/auth/login');
 			}
 		} else {
 			$this->session->set_flashdata('message', 'Unregistered Email');
-			redirect('cpanel/auth/login');
+			redirect('m3rc4n73/auth/login');
 		}
 	}
 	public function logout()
