@@ -83,7 +83,7 @@ class Email extends CI_Controller
 			return;
 		}
 
-		$string = $anonregis . "-" . $pass . "-" . $email;
+		$string = $anonregis . "(;)" . $pass . "(;)" . $email;
 		$encrypted = $this->openssl->encrypt($string, ENCRYPTION_KEY);
 
 		//init
@@ -188,7 +188,7 @@ class Email extends CI_Controller
 	public function activate()
 	{
 		$real = base64_decode($_GET["key"]);
-		$data = explode("-", $this->openssl->decrypt($real, ENCRYPTION_KEY));
+		$data = explode("(;)", $this->openssl->decrypt($real, ENCRYPTION_KEY));
 
 		$email = $data[2];
 		$xmlapi = new xmlapi(SERVER_IP);
