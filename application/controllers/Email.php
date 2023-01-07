@@ -232,8 +232,8 @@ class Email extends CI_Controller
 
     .body {
       width: 100%;
-      background: #000;
-      color: #fff;
+      background: #fff;
+      color: #000;
       padding: 1rem 1rem;
       padding-bottom: 5rem;
       height: auto;
