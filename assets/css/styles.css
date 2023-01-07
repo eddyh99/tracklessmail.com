@@ -12879,7 +12879,8 @@ footer a:focus {
 }
 
 .footer-contact>h2,
-.footer-contact>span {
+.footer-contact span,
+.footer-contact a {  text-decoration: none !important;
   margin-bottom: 2rem;
   font-family: 'Inter', sans-serif;
   line-height: 30px;

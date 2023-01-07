@@ -83,7 +83,7 @@ class Email extends CI_Controller
 			return;
 		}
 
-		$string = $anonregis . "-" . $pass . "-" . $email;
+		$string = $anonregis . "(;)" . $pass . "(;)" . $email;
 		$encrypted = $this->openssl->encrypt($string, ENCRYPTION_KEY);
 
 		//init
@@ -188,10 +188,9 @@ class Email extends CI_Controller
 	public function activate()
 	{
 		$real = base64_decode($_GET["key"]);
-		$data = explode("-", $this->openssl->decrypt($real, ENCRYPTION_KEY));
+		$data = explode("(;)", $this->openssl->decrypt($real, ENCRYPTION_KEY));
 
 		$email = $data[2];
-
 		$xmlapi = new xmlapi(SERVER_IP);
 		$xmlapi->set_port(SERVER_PORT); // the ssl port for cpanel
 
@@ -233,8 +232,8 @@ class Email extends CI_Controller
 
     .body {
       width: 100%;
-      background: #000;
-      color: #fff;
+      background: #fff;
+      color: #000;
       padding: 1rem 1rem;
       padding-bottom: 5rem;
       height: auto;
@@ -351,7 +350,7 @@ class Email extends CI_Controller
 					redirect(base_url() . "auth/info_activate?mail=" . substr($data[0], 0, -18) . '&email=' . $email);
 					return;
 				} else {
-					if (strpos($result->cpanelresult->data->reason, "it is too weak")) {
+					if (strpos($result->cpanelresult->data[0]->reason, "it is too weak")) {
 						$errmessage = "Your choosen password is to weak, please try again";
 					} else {
 						$errmessage = "Error while activating this email account. Please try again";
