@@ -91,7 +91,7 @@ class Member extends CI_Controller
         $mail->SMTPAuth        = true;
         $mail->Username        = 'no-reply@tracklessmail.com';
         $mail->Password        = 'k]qo6uUroZ1k';
-        $mail->SMTPDebug    = 2;
+        // $mail->SMTPDebug    = 2;
         $mail->SMTPAutoTLS    = true;
         $mail->SMTPSecure    = "tls";
         $mail->Port            = 587;
@@ -110,7 +110,7 @@ class Member extends CI_Controller
 
         $mail->Subject = $subject;
         foreach ($email as $dt) {
-            $mail->AddAddress($dt);
+            $mail->AddAddress($dt['email']);
         }
 
         $mail->msgHTML($message);
